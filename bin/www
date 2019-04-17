@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('fee-tracker:server');
+var debug = require('debug')('fees-tracker:server');
 var http = require('http');
 
 /**
