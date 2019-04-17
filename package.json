@@ -1,17 +1,36 @@
 {
-  "name": "fees-tracker",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "start": "node ./bin/www"
-  },
-  "dependencies": {
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.6.9",
-    "express": "~4.16.0",
-    "express-handlebars": "^3.0.2",
-    "hbs": "~4.0.1",
-    "http-errors": "~1.6.2",
-    "morgan": "~1.9.0"
-  }
+	"name": "School-fee-tracker",
+	"version": "1.0.0",
+	"description": "Fee Tracker App",
+	"private": true,
+	"main": "app.js",
+	"scripts": {
+		"start": "node ./bin/www",
+		"dev": "nodemon ./bin/www"
+	},
+	"devDependencies": {
+		"nodemon": "^1.18.10"
+	},
+	"author": "DragonBeast Team",
+	"license": "MIT",
+	"dependencies": {
+		"body-parser": "^1.18.3",
+		"connect-flash": "^0.1.1",
+		"connect-mongo": "^2.0.3",
+		"cookie-parser": "^1.4.4",
+		"debug": "^4.1.1",
+		"dotenv": "^7.0.0",
+		"express": "^4.16.4",
+		"express-handlebars": "^3.0.2",
+		"express-oas-generator": "^1.0.7",
+		"express-session": "^1.16.1",
+		"express-validator": "^5.3.1",
+		"flash": "^1.1.0",
+		"hbs": "^4.0.4",
+		"http-errors": "^1.7.2",
+		"lodash": "^4.17.11",
+		"mongoose": "^5.5.2",
+		"morgan": "^1.9.1",
+		"validator": "^10.11.0"
+	}
 }
