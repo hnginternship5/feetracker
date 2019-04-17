@@ -1,4 +1,4 @@
-const classes = require("../model/class");
+const classes = require("../models/classes");
 /**
  * @param {string} text
  * @returns {object} return all
