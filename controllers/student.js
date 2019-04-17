@@ -11,7 +11,7 @@ const Student = {
             amount_paid: req.body.amount_paid,
             class: req.body.class,
             student_id: req.body.student_id,
-            reg_number: req.body.reg_number
+            // reg_number: req.body.reg_number
         }
         try {
             const createdStudent = await studentDb.create(queryText);

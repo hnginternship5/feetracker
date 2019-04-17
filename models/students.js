@@ -35,11 +35,11 @@ const studentSchema = new Schema(
             type: String,
             required: true
         },
-        reg_number: {
-            type: String,
-            unique: true,
-            required: true
-        }
+        // reg_number: {
+        //     type: String,
+        //     unique: true,
+        //     required: true
+        // }
     }
 );
 module.exports = mongoose.model("Student", studentSchema);
