@@ -1,5 +1,6 @@
 // import models
 const Sample = require('./sample');
+const Email = require('./email');
 
 class Example {
 	/**
@@ -61,8 +62,27 @@ class Example {
 				});
 		});
 	}
+};
+
+class EmailDb {
+	/**
+	 * @param {string} text
+	 * @returns {object} Return all
+	 */
+	static findAll(param) {
+		return new Promise((resolve, reject) => {
+			Email.findAll(param)
+				.then(res => {
+					resolve(res);
+				})
+				.catch(err => {
+					reject(err);
+				});
+		});
+	}
 }
 
 module.exports = {
 	Example,
+	EmailDb
 };

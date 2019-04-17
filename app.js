@@ -11,6 +11,7 @@ const path = require('path');
 
 const database = require('./config/key').MongoURI;
 var indexRoute = require('./routes/index');
+var emailRoute = require('./routes/email');
 
 // Set up the app with express
 const app = express();
@@ -55,6 +56,7 @@ db.on('error', console.error.bind(console, 'Mongodb connection error:'));
 
 // API ROUTES
 app.use('/', indexRoute);
+app.use('/email', emailRoute);
 
 // Express will serve up 404 file if a route is not recognized
 app.get('*', (req, res) => {

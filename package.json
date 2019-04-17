@@ -29,8 +29,10 @@
 		"hbs": "^4.0.4",
 		"http-errors": "^1.7.2",
 		"lodash": "^4.17.11",
+		"mailgun-js": "^0.22.0",
 		"mongoose": "^5.5.2",
 		"morgan": "^1.9.1",
+		"node-cron": "^2.0.3",
 		"validator": "^10.11.0"
 	}
 }
