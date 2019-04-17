@@ -3,7 +3,7 @@
 # Getting Started
 
 1. Fork the repository, clone it.
-2. cd (change directory) into the project folder i.e remote_job_alert.
+2. cd (change directory) into the project folder i.e Fees-tracker.
 3. Run `npm install` (on your terminal) to install the dependencies.
 4. Run `npm start` (on your terminal) to run the project.
 5. Go to your browser `localhost:5000` to view the project.
@@ -15,7 +15,7 @@ Fork the repository first and clone it
 git clone CLONE_URL
 ```
 
-Change into cloned repo and install dependencies
+Change into cloned repo directory(i.e Fees-tracker) and install dependencies
 
 ```
 npm install
