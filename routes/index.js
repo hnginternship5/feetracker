@@ -24,7 +24,7 @@ router.get("/", function(req, res, next) {
 router.get("/about", Home.aboutUs);
 
 //Admin Page
-router.get('/admin', Home.admin);
+router.get('/admin', Home.admin)
 
 router.post('/admin', function(req, res, next){
 	if (req.body.username && req.body.password) {
