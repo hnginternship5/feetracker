@@ -31,6 +31,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
 // connect flash
 app.use(flash());
 app.use(session({ secret: 'dragonbeast4theTrophy', saveUninitialized: false, resave: false }));
