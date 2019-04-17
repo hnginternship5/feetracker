@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const exphbs = require('express-handlebars');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const _ = require('lodash');
 const flash = require('connect-flash');
 const session = require('express-session');
 const expressOasGenerator = require('express-oas-generator');
@@ -35,11 +36,11 @@ app.use(flash());
 app.use(session({ secret: 'dragonbeast4theTrophy', saveUninitialized: false, resave: false }));
 
 // generate api docs (Swagger)
-expressOasGenerator.init(app, function(spec) {
-	_.set(spec, 'info.title', 'New Title');
-	_.set(spec, "paths['/path'].get.parameters[0].example", 2);
-	return spec;
-});
+// expressOasGenerator.init(app, function(spec) {
+// 	_.set(spec, 'info.title', 'New Title');
+// 	_.set(spec, "paths['/path'].get.parameters[0].example", 2);
+// 	return spec;
+// });
 
 // connect to database
 mongoose.connect(database, { useNewUrlParser: true }, function(err, client) {
