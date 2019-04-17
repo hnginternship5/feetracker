@@ -1,0 +1,26 @@
+{
+    "swagger": "2.0",
+    "paths": {
+      "/": {
+        "get": {
+          "summary": "/",
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              
+            }
+          ]
+        }
+      }
+    },
+    "info": {
+      "title": "School-fee-tracker",
+      "version": "1.0.0",
+      "license": {
+        "name": "MIT"
+      },
+      "description": "[Specification JSON](/api-spec)\n\nDragon Beast Project - HNG5"
+    }
+  }
