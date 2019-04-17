@@ -2,7 +2,17 @@ const studentDb = require('./studentPromise');
 
 const Student = {
     async create(req, res, next){
-        const queryText = {}
+        const queryText = {
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+            guardian_name: req.body.guardian_name,
+            guardian_number: req.body.guardian_number,
+            guardian_email: req.body.guardian_email,
+            amount_paid: req.body.amount_paid,
+            class: req.body.class,
+            student_id: req.body.student_id,
+            reg_number: req.body.reg_number
+        }
         try {
             const createdStudent = await studentDb.create(queryText);
             return res.status(201).json(createdStudent);
