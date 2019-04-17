@@ -1,0 +1,26 @@
+.contentBG {
+    background: url(whyChooseFeeTracker/feeTrackerBG.PNG);
+    background-size: cover;
+}
+
+.bg-bg1 {
+    background: #A7005D;
+}
+
+.bg-colr1 {
+    color: #A7005D;
+}
+
+.text_color-FFF {
+    color: #FFFFFF;
+}
+
+.btn-px-3rem {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.card-padding {
+    padding: 8rem;
+    margin-left: 4rem;
+}
