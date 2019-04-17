@@ -34,7 +34,7 @@ const studentSchema = new Schema(
         student_id: {
             type: String,
             required: true
-        },
+        }
         // reg_number: {
         //     type: String,
         //     unique: true,
