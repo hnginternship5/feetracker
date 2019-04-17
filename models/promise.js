@@ -64,5 +64,5 @@ class Example {
 }
 
 module.exports = {
-	Example
+	Example,
 };

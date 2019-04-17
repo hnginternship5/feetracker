@@ -35,7 +35,9 @@ app.use(flash());
 app.use(session({ secret: 'dragonbeast4theTrophy', saveUninitialized: false, resave: false }));
 
 // generate api docs (Swagger)
-expressOasGenerator.init(app, spec => {
+expressOasGenerator.init(app, function(spec) {
+	_.set(spec, 'info.title', 'New Title');
+	_.set(spec, "paths['/path'].get.parameters[0].example", 2);
 	return spec;
 });
 
@@ -56,7 +58,6 @@ app.use('/', indexRoute);
 app.get('*', (req, res) => {
 	res.render(path.resolve(__dirname, 'views', '404'));
 });
-
 
 // error handler
 app.use(function(err, req, res, next) {

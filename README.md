@@ -27,7 +27,7 @@ Start the project
 npm start
 ```
 
-Visit `http://localhost:5000` to view the project.
+Visit `http://localhost:3030` to view the project.
 
 **NOTES:**
 
