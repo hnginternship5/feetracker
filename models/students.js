@@ -31,7 +31,7 @@ const studentSchema = new Schema(
             type: String,
             required: true
         },
-        class: {
+        student_id: {
             type: String,
             required: true
         },
