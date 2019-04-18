@@ -34,4 +34,5 @@ Visit `http://localhost:3030` to view the project.
 &mdash; After making changes to the repo, push to master and create pull request, make sure there are no merge conflicts.
 
 &mdash; Do not merge pull request, a mentor will.
-&mdash; You if upon fetch upstream to update and npm start can't run, do npm intall then try again.
+&mdash;
+Upon fetch upstream to update your repo and npm start can't run, do npm intall first then try again.
