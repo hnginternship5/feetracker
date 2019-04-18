@@ -1,5 +1,5 @@
 .contentBG {
-    background: url(whyChooseFeeTracker/feeTrackerBG.PNG);
+    background: url(whyChooseFeeTrackerIMG/feeTrackerBG.PNG);
     background-size: cover;
 }
 
@@ -16,11 +16,37 @@
 }
 
 .btn-px-3rem {
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }
 
 .card-padding {
-    padding: 8rem;
+    /* padding: 8rem; */
     margin-left: 4rem;
+    margin-top: 10%;
+}
+
+.floatToRight {
+    margin-left: 30%;
+    padding-bottom: 0;
+}
+
+.logoMarginLeft {
+    margin-left: 10%;
+}
+
+.adjust {
+    text-align: center;
+}
+
+.register {
+    text-align: center;
+}
+
+.textAlign {
+    text-align: center;
+}
+
+.pushDown {
+    margin-top: 10rem;
 }
