@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-var Home = require("../controllers/home");
+
 
 // import controllers
 var Test = require('../controllers/test');
@@ -22,12 +22,3 @@ router.get("/", function(req, res, next) {
 });
 
 
-// GET About us page
-router.get("/about", Home.aboutUs);
-
-
-// GET Contact us page
-router.get("/contact", Home.contactUs);
-
-// GET FAQS us page
-router.get("/faqs", Home.faqs);
