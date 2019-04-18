@@ -1,12 +1,12 @@
-const classes = require("../models/classes");
+const schools = require("../models/schools");
 /**
  * @param {string} text
  * @returns {object} return all
  */
-class ClassesDb {
+class SchoolsDb {
     static find(param){
         return new Promise((resolve, reject) => {
-            classes.find(param)
+            schools.find(param)
             .then((res) => {
                 resolve(res);
             })
@@ -18,7 +18,7 @@ class ClassesDb {
 
     static create(param){
         return new Promise((resolve, reject) => {
-            classes.create(param)
+            schools.create(param)
             .then((res) => {
                 resolve(res);
             })
@@ -30,7 +30,7 @@ class ClassesDb {
 
     static findOne(param){
         return new Promise((resolve, reject) => {
-            classes.findOne(param)
+            schools.findOne(param)
             .then((res) => {
                 resolve(res);
             })
@@ -47,7 +47,7 @@ class ClassesDb {
      */
     static findOneAndUpdate(param, text){
         return new Promise((resolve, reject) => {
-            classes.findOneAndUpdate(param, text)
+            schools.findOneAndUpdate(param, text)
             .then((res) => {
                 resolve(res);
             })
@@ -59,7 +59,7 @@ class ClassesDb {
 
     static findOneAndDelete(param){
         return new Promise((resolve, reject) => {
-            classes.findOneAndDelete(param)
+            schools.findOneAndDelete(param)
             .then((res) => {
                 resolve(res);
             })
@@ -70,5 +70,5 @@ class ClassesDb {
     }
 }
 
-module.exports = ClassesDb;
+module.exports = SchoolsDb;
 
