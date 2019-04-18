@@ -10,7 +10,7 @@ const Classes = {
             return res.status(400).send(error);
         }
     },
-    async get_all_students(req, res, next){
+    async get_all_classes(req, res, next){
         const queryText = {};
         try {
             const foundClasses = await classDb.find(queryText);
@@ -19,16 +19,18 @@ const Classes = {
             return res.status(400).send(error);
         }
     },
-    async get_all_students_json(req, res, next){
-        const queryText = {};
+    async get_all_parent_classes(req, res, next){
+        const queryText = {
+            parent_id: null
+        };
         try {
-            const foundclasses = await classDb.find(queryText);
+            const foundClasses = await classDb.find(queryText);
             return res.status(200).json(foundClasses);
         } catch(error){
             return res.status(400).send(error);
         }
     },
-    async get_one_student(req, res, next){
+    async get_one_class(req, res, next){
         const queryText = {
            _id: req.params.class_id 
         }
@@ -39,18 +41,19 @@ const Classes = {
             return res.status(400).send(error);
         }
     },
-    async edit_student(req, res, next){
+    async get_class_arms(req, res, next) {
         const queryText = {
-            _id: req.params.class_id
-        }
+            isArm: true,
+            parent_id: req.params.class_id
+        };
         try {
-            const editedClass = await classDb.findOne(queryText);
-            return res.status(200).json(editedClass);
+            const foundArms = await classDb.findOne(queryText);
+            return res.status(200).json(foundArms);
         }catch(error){
             return res.status(400).send(error);
         }
     },
-    async update_students(req, res, next){
+    async update_class(req, res, next){
         const queryText = {
             _id: req.params.class_id
         }
@@ -62,12 +65,12 @@ const Classes = {
             return res.status(400).send(error);
         }
     },
-    async delete_student(req, res, next){
+    async delete_class(req, res, next){
         const queryText = {
             _id: req.params.class_id
         }
         try {
-            const deletedClass = await classDb.findOneAndUpdate(queryText, updateText);
+            const deletedClass = await classDb.findOneAndDelete(queryText);
             return res.status(200).json(deletedClass);
         }catch(error){
             return res.status(400).send(error);
