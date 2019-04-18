@@ -30,4 +30,8 @@ router.get('/dashboard/settings', function(req, res, next){
 router.get('/dashboard/students', function(req, res, next){
 	res.render('dashboard/students');
 });
+
+router.get('/about', function(req,res,next){
+	res.render('aboutus');
+})
 module.exports = router;
