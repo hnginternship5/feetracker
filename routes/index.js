@@ -32,6 +32,6 @@ router.get('/dashboard/students', function(req, res, next){
 });
 
 router.get('/about', function(req,res,next){
-	res.render('aboutus');
+	res.render('about');
 })
 module.exports = router;
