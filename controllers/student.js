@@ -2,7 +2,16 @@ const studentDb = require('./studentPromise');
 
 const Student = {
     async create(req, res, next){
-        const queryText = {}
+        const queryText = {
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+            guardian_name: req.body.guardian_name,
+            guardian_number: req.body.guardian_number,
+            guardian_email: req.body.guardian_email,
+            amount_paid: req.body.amount_paid,
+            class: req.body.class,
+            reg_number:  req.body.reg_number
+        };
         try {
             const createdStudent = await studentDb.create(queryText);
             return res.status(201).json(createdStudent);
@@ -42,7 +51,7 @@ const Student = {
     async edit_student(req, res, next){
         const queryText = {
             _id: req.params.student_id
-        }
+        };
         try {
             const editedStudent = await studentDb.findOne(queryText);
             return res.status(200).json(editedStudent);
@@ -51,10 +60,20 @@ const Student = {
         }
     },
     async update_students(req, res, next){
+      
         const queryText = {
-            _id: req.params.student_id
-        }
-        const updateText = {}
+            _id: req.params.student_id  
+        };
+        const updateText = {
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+            guardian_name: req.body.guardian_name,
+            guardian_number: req.body.guardian_number,
+            guardian_email: req.body.guardian_email,
+            amount_paid: req.body.amount_paid,
+            class: req.body.class,
+            reg_number:  req.body.reg_number
+        };
         try {
             const updatedStudent = await studentDb.findOneAndUpdate(queryText, updateText);
             return res.status(200).json(updatedStudent);
@@ -65,7 +84,7 @@ const Student = {
     async delete_student(req, res, next){
         const queryText = {
             _id: req.params.student_id
-        }
+        };
         try {
             const deletedStudent = await studentDb.findOneAndUpdate(queryText, updateText);
             return res.status(200).json(deletedStudent);
@@ -75,3 +94,5 @@ const Student = {
     }
     
 }
+
+module.exports = students;
