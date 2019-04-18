@@ -1,11 +1,13 @@
 const express = require('express');
 const router = express.Router();
 
+
 // import controllers
-var Test = require('../controllers/test');
+var Home = require('../controllers/home');
+
 
 // welcome page
-router.get('/', Test.first);
+router.get('/', Home.first);
 
 router.get('/login', function(req, res, next){
 	res.render('signin');
@@ -35,3 +37,15 @@ router.get('/about', function(req,res,next){
 	res.render('about');
 })
 module.exports = router;
+
+
+// Updated Router here
+/* GET home page. */
+//router.get("/", Home.index);
+router.get("/", function(req, res, next) {
+ Home.find(function(err, fees) {
+    res.render("index", { title: "School_fees_tracker"});
+  });
+});
+
+

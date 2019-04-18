@@ -1,7 +1,7 @@
 // import whenever interaction is needed for db(models)
-const test = require('../models/promise').Test;
+const home = require('../models/promise').Home;
 
-const Test = {
+const Home = {
 	async first(req, res, next) {
 		try {
 			return res.status(200).render('index');
@@ -11,4 +11,4 @@ const Test = {
 	},
 };
 
-module.exports = Test;
+module.exports = Home;
