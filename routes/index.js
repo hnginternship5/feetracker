@@ -7,4 +7,27 @@ var Test = require('../controllers/test');
 // welcome page
 router.get('/', Test.first);
 
+router.get('/login', function(req, res, next){
+	res.render('signin');
+});
+
+router.get('/register', function(req, res, next){
+	res.render('signup');
+});
+
+router.get('/forgotpassword', function(req, res, next){
+	res.render('forgot');
+});
+
+router.get('/dashboard', function(req, res, next){
+	res.render('dashboard/index');
+});
+
+router.get('/dashboard/settings', function(req, res, next){
+	res.render('dashboard/settings');
+});
+
+router.get('/dashboard/students', function(req, res, next){
+	res.render('dashboard/students');
+});
 module.exports = router;
