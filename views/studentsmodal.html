@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <style>
+body {
+    margin: 0;
+    font-family: "Work Sans", sans-serif, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }      
+  .btn {
+    background-color: hsla(9, 100%, 64%, 1);
+    color: #ffffff;
+  }
+
+.comp {
+    color: red;
+    font-weight: 80px;
+}
+
+@media screen and (max-width: 670px) {
+.center {
+text-align: center;
+}
+}
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2 class="center">Students details</h2>
+  <!-- Button to Open the Modal -->
+  <button type="button" class="btn " data-toggle="modal" data-target="#myModal">
+    Add a Student
+  </button>
+
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Students details</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">            
+              <span aria-hidden="true">&times;</button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+         <h6 class=>The fields with red asterik are compulsory</h6>
+            <form action="/pay" method="post" class="mt-3">
+                <div class="form-group">
+                    <label for="" class="my-0">Students' name.   <span class="comp">*</span></label>
+                    <input type="text" name="Studentsname" class="form-control my-0" placeholder="John" required>
+                </div>
+                <div class="form-group">
+                    <label for="" class="my-0">Guardians' name.   <span class="comp">*</span></label>
+                    <input type="text" name="guardiansName" class="form-control my-0" placeholder="Adams" minlength="11" pattern="[+]{0,1}[0-9\s]+"
+                     maxlength="16" required>
+                </div>
+                <div class="form-group">
+                    <label for="" class="my-0">Guardians' phone number.    <span class="comp">*</span></label>
+                    <input type="tel" name="guardiansPhoneNumber" class="form-control my-0" placeholder="+23481645909" minlength="11" pattern="[+]{0,1}[0-9\s]+"
+                     maxlength="16" required></div>
+                <div class="form-group">
+                    <label for="" class="my-0">Guardians' email</label>
+                    <input type="email" name="guardiansEmail" class="form-control my-0" placeholder="johndoe@gmail.com" minlength="8" pattern="[+]{0,1}[0-9\s]+"
+                     maxlength="16" required>
+                </div>
+                <div class="form-group">
+                    <label for="" class="my-0">Students' class.  <span class="comp">*</span></label>
+                    <select class="form-control" id="sel1" name="sellist1">
+                      <option>Year 1</option>
+                      <option>Year 2</option>
+                      <option>Year 3</option>
+                      <option>Year 4</option>
+                    </select>
+                  </div>
+                  <input value="submit" type="submit" name="studentdetails" class="btn px-5 mt-4"></input>
+                </div>
+                
+                </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+</body>
+</html>
