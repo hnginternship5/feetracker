@@ -16,35 +16,8 @@
 <div class="mobile-wrapper">
 
 </div>
-	<div id="desktop_nav_wrapper" class="">
-	<div class="container">
-		<nav class="navbar navbar-expand-lg p-0 navbar-light" id="">
-			<a class="navbar-brand" href="#">
-				<img src="/images/logo.png" alt="logo">
-			</a>
-			<button class="navbar-toggler text-black" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
 
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav ml-auto desktop_nav navbar-light">
-					<li class="nav-item active">
-						<a class="nav-link uni_link" href="#">Home</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link uni_link" href="#">About Us</a>
-					</li>
-					<li class="nav-item active">
-						<a class="nav-link uni_link" href="#">Login</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link reg_desktop" href="#">Register</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
-	</div>
-</div>
+{{> header }}
 <header>
 	<div class="container">
 		<div class="row">
@@ -52,7 +25,7 @@
 				<h1 class="banner_header">School Fees Tracker</h1>
 				<p class="banner_text">Manage School Fees Payment of your Students</p>
 
-				<a href="" class="btn banner-btn w-50">SIGN UP FREE</a>
+				<a href="/register" class="btn banner-btn w-50">SIGN UP FREE</a>
 			</div>
 			<div class="col">
 				<img src="/images/banner_image.png" alt="" class="img-fluid">
@@ -60,6 +33,7 @@
 		</div>
 	</div>
 </header>
+
 <section class="py-7" id="howToUse">
 	<h2 class="text-center section_header">How to use FeeTracker</h2>
 	<div class="container py-6">
@@ -82,7 +56,7 @@
 		</div>
 	</div>	
 	<div class="text-center">
-		<a href="" class="btn  banner-btn">GET STARTED</a>
+		<a href="/register" class="btn  banner-btn">GET STARTED</a>
 	</div>
 </section>
 
@@ -142,43 +116,14 @@
 			</div>
 			<div class="col px-5 choose_left">
 				<h3>FeeTrack truly is the app for you. Let’s make managing fees easy for you.</h3>
-				<a href="" class="btn banner-btn px-4 br-0 mt-5">SIGN UP</a>
+				<a href="/register" class="btn banner-btn px-4 br-0 mt-5">SIGN UP</a>
 			</div>
 		</div>
 	</div>
 </section>
 
-<footer class="">
-	<div class="container border-top">
-		<div class="row py-5">
-			<div class="col-lg-4 footer">
-				<h5 class="b-7">FeeTracker</h5>
-				<p>FeeTracker is a renowned school fees tracker web app.</p>
-			</div>
-			<div class="col-lg-4">
-				<h5 class="b-7">Company</h5>
-				<ul>
-					<li><a href="">About Us</a></li>
-					<li><a href="">Features</a></li>
-					<li><a href="">Login</a></li>
-					<li><a href="">Sign Up</a></li>
-				</ul>
-			</div>
-			<div class="col-lg-4 social">
-				<h5 class="b-7">Social</h5>
-				<ul class="social-links">
-					<li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-					<li><a href=""><i class="fab fa-twitter"></i></a></li>
-					<li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
-					<li><a href=""><i class="fab fa-instagram"></i></a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<div class="last-footer text-center t-12">
-		&copy; 2019. FeeTracker
-	</div>
-</footer>
+{{> footer}}
+
 <body>
 
 </body>
