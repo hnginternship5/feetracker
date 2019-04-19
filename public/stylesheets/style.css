@@ -78,14 +78,16 @@ body{
 }
 
 header{
+  display: flex;
+  align-content: center;
 	background: url('/images/banner.png');
 	width: 100%;
-  height: 400px;
-  padding: 50px 0;
+  height: auto;
+  padding: 10px 0;
 	background-position: center;
   background-size: cover;
-  margin-top: 100px
 }
+
 
 /* Styling the navigation */
 .reg_desktop{
@@ -108,15 +110,13 @@ header{
 
 
 #desktop_nav_wrapper {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
+  position: sticky;
+  top:0;
   z-index: 9999;
-  height: 100px;
   width: 100%;
+  height: auto;
   color: #fff;
-  line-height: 100px;
+  line-height: 80px;
     -webkit-transition: height .5s, line-height .5s; /* Safari */
     transition: height .5s, line-height .5s;
     background: #fff
@@ -141,13 +141,15 @@ header{
 }
 
 .scrolled-nav {
-  height: 60px !important;
+  padding-top: .5em;
+  height: 70px !important;
   line-height: 60px !important;
   box-shadow: 0px -1px 5px rgb(59, 59, 59)
 }
 
 /* Banner Section */
 .banner_header{
+  margin-top: .5em;
   font-size: 4em;
   font-weight: bold
 }
@@ -161,12 +163,31 @@ header{
   color: #fff;
   /* width: 40%; */
   padding: 10px;
-  border-radius: 10px
+  border-radius: 10px;
 }
 
 .banner-btn:hover{
   background: rgb(134, 36, 80);
   color: #fff
+}
+
+.img-fluid{
+  margin-top: 40px;
+}
+
+@media screen and (max-width:414px){
+  .img-fluid{
+    display: none;
+  }
+  
+  .banner-btn{
+    margin: 2em 0;
+  }
+
+  .banner_header{
+    font-size: 3em;
+  }
+  
 }
 
 /* How to use Section */
@@ -246,10 +267,22 @@ header{
   line-height: 43px
 }
 
+@media screen and (max-width:414px){
+  .choose_left{
+    display: none;
+  }
+}
+
 
 /* Footer  */
 
+
 footer{
+
+@media screen and (max-width: 414px){
+  .social{
+    margin-top: 1.5em;
+  }
 
 }
 
@@ -272,7 +305,7 @@ footer a:hover{
 
 .social-links {
   display: flex;
-  display: -webkit-flex
+  display: -webkit-flex ;
 }
 
 .social-links li {
@@ -280,7 +313,7 @@ footer a:hover{
 }
 
 .social-links li a{
-  background: #a92e65;
+   background: #a92e65;
     color: white;
     width: 30px;
     height: 30px;
