@@ -35,7 +35,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // connect flash
 app.use(flash());
-app.use(session({ secret: 'dragonbeast4theTrophy', saveUninitialized: false, resave: false }));
+app.use(session({ secret: 'dragonbeast4theTrophy', saveUninitialized: true, resave: true }));
 
 // generate api docs (Swagger)
 // expressOasGenerator.init(app, function(spec) {
@@ -45,6 +45,7 @@ app.use(session({ secret: 'dragonbeast4theTrophy', saveUninitialized: false, res
 // });
 
 app.use(passport.initialize());
+app.use(passport.session());
 require('./config/passport')(passport);
 
 // connect to database

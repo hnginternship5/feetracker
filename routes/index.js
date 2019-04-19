@@ -1,5 +1,4 @@
 const express = require('express');
-const passport = require("passport");
 const router = express.Router();
 
 
@@ -39,20 +38,31 @@ router.get('/about', function(req,res,next){
 	res.render('about');
 })
 
-// API ROUTES
+// API routes
 
 // Authentication routes
 router.post('/api/register', Auth.register); // School administrator registration
 
 router.post('/api/login', Auth.login); // School administrator login
 
+router.get('/api/logout', Auth.logout);
+
 // Passport authentication test confirmation
-router.get('/api/private', passport.authenticate('jwt', {session: false}), (req,res) => {
-	res.status(200).send({ message: "Authenticated successfully "});
+router.get('/api/profile', isAuthenticated, (req, res) => {
+	res.status(200).send(req.user);
 });
 
 module.exports = router;
 
+//Authentication middleware
+function isAuthenticated(req, res, next) {
+	if(req.isAuthenticated())
+	   return next();
+	else
+	   return res.status(401).send({
+		 error: 'User not authenticated'
+	   })
+}
 
 // Updated Router here
 /* GET home page. */

@@ -1,29 +1,37 @@
-const { Strategy, ExtractJwt } = require('passport-jwt');
-
-const User = require('../models/users');
+const LocalStrategy = require('passport-local');
+const userDb = require("../controllers/promises").UsersDb;
 
 module.exports = function (passport) {
-    var opts = {
-        jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
-        secretOrKey: process.env.SECRET || 'DragonBeastSecret'
-    };
+    passport.use(new LocalStrategy({
+            usernameField: 'email',
+            passwordField: 'password'
+        },
+        function(username, password, done) {
+            userDb.findOne({ email: username })
+                .then(user => {
+                    if (!user)
+                        return done(null, false, { message: 'Incorrect username or password' });
+                    else {
+                        if (!user.validatePassword(password)) {
+                            return done(null, false, { message: 'Incorrect username or password' });
+                        }
+                        else {
+                            console.log("Validated user successfully");
+                            return done(null, user);
+                        }
+                    }
+                });
+        }
+    ));
 
-    passport.use(new Strategy(opts, (payload, done) => {
-        User.findById(payload.id)
-            .then(user => {
-                if(user){
-                    return done(null, {
-                        id: user.id,
-                        name: user.first_name + " " + user.last_name,
-                        email: user.email,
-                    });
-                }
-                return done(null, false);
-            }).catch(err => console.error(err));
-    }));
-
-    passport.serializeUser(function (user, done) {
+    passport.serializeUser(function(user, done) {
         done(null, user.id);
     });
 
+    passport.deserializeUser(function(id, done) {
+        userDb.findOne({ _id: id })
+                .then(user => {
+                    done(null, user.toJSON());
+                });
+    });
 }
