@@ -6,8 +6,9 @@ const StudentController = require('../controllers/student');
 const ClassController = require('../controllers/class');
 const FeeController = require('../controllers/fee');
 const TermController = require('../controllers/term');
-var HomeController = require('../controllers/home');
-var AuthController = require('../controllers/auth');
+const AuthController = require('../controllers/auth');
+const studentValidations = require('../validation/student.validation.js')
+const HomeController = require('../controllers/home');
 
 
 // welcome page
@@ -76,7 +77,7 @@ router.get("/", function(req, res, next) {
 });
 
 // Student Routes
-router.post('/student', StudentController.create);
+router.post('/student', studentValidations.sanitizeAndValidateStudents,  StudentController.create);
 router.get('/student', StudentController.get_one_student);
 router.get('/student', StudentController.get_all_students);
 
