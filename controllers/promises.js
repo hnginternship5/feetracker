@@ -2,6 +2,7 @@ const classes = require("../models/classes");
 const fees = require("../models/fees");
 const schools = require("../models/schools");
 const students = require('../models/student');
+//const user = require('../models/user');
 /**
  * @param {string} text
  * @returns {object} return all
