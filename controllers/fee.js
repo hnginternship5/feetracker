@@ -1,8 +1,16 @@
 const feeDb = require("./feePromise");
+const classModel = require("../models/classes");
+const schoolModel = require("../models/schools");
+const termModel = require("../models/term");
 
 const Fees = {
     async create(req, res, next){
-        const queryText = {}
+        const queryText = {
+            amount: req.body.amount,
+            class_id: req.body.class_id,
+            school_id: req.body.school_id,
+            term: req.body.term
+        };
         try {
             const createdFee = await feeDb.create(queryText);
             return res.status(201).json(createdFee);
@@ -34,7 +42,10 @@ const Fees = {
         const queryText = {
             _id: req.params.fee_id
         }
-        const updateText = {}
+        const updateText = {
+            amount: req.body.amount,
+            class_id: req.body.class_id
+        };
         try {
             const updatedFee = await feeDb.findOneAndUpdate(queryText, updateText);
             return res.status(200).json(updatedFee);

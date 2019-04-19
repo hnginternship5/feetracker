@@ -1,8 +1,14 @@
 const classDb = require("./classPromise");
+const classModel = require("../models/schools");
+const feeModel = require("../models/fees");
 
 const Classes = {
     async create(req, res, next){
-        const queryText = {}
+        const queryText = {
+            school_id: req.body.school_id,
+            name: req.body.name,
+            fee: req.body.fee
+        };
         try {
             const createdClass = await classDb.create(queryText);
             return res.status(201).json(createdClass);
@@ -41,23 +47,27 @@ const Classes = {
             return res.status(400).send(error);
         }
     },
-    async get_class_arms(req, res, next) {
-        const queryText = {
-            isArm: true,
-            parent_id: req.params.class_id
-        };
-        try {
-            const foundArms = await classDb.findOne(queryText);
-            return res.status(200).json(foundArms);
-        }catch(error){
-            return res.status(400).send(error);
-        }
-    },
+    // async get_class_arms(req, res, next) {
+    //     const queryText = {
+    //         isArm: true,
+    //         parent_id: req.params.class_id
+    //     };
+    //     try {
+    //         const foundArms = await classDb.findOne(queryText);
+    //         return res.status(200).json(foundArms);
+    //     }catch(error){
+    //         return res.status(400).send(error);
+    //     }
+    // },
     async update_class(req, res, next){
         const queryText = {
             _id: req.params.class_id
         }
-        const updateText = {}
+        const updateText = {
+            school_id: req.body.school_id,
+            name: req.body.name,
+            fee: req.body.fee
+        };
         try {
             const updatedClass = await classDb.findOneAndUpdate(queryText, updateText);
             return res.status(200).json(updatedClass);

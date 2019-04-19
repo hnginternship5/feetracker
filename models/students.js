@@ -3,6 +3,11 @@ const Schema = mongoose.Schema;
 
 const studentSchema = new Schema(
     {
+        school_id: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'School',
+        
+          },
         first_name: {
             type: String,
             required: true
@@ -27,20 +32,15 @@ const studentSchema = new Schema(
             type: Number,
             required: true
         },
-        class: {
-            type: String,
-            required: true
+        class_id: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Class',
         },
         reg_number: {
             type: String,
             unique: true,
             required: true
         }
-        // reg_number: {
-        //     type: String,
-        //     unique: true,
-        //     required: true
-        // }
     }
 );
 module.exports = mongoose.model("Student", studentSchema);

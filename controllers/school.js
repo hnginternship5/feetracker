@@ -2,7 +2,10 @@ const schoolDb = require("./schoolPromise");
 
 const Schools = {
     async create(req, res, next){
-        const queryText = {}
+        const queryText = {
+            name: req.body.name,
+            address: req.body.address
+        };
         try {
             const createdSchool = await schoolDb.create(queryText);
             return res.status(201).json(createdSchool);
@@ -34,7 +37,10 @@ const Schools = {
         const queryText = {
             _id: req.params.school_id
         }
-        const updateText = {}
+        const updateText = {
+            name: req.body.name,
+            type: req.body.type
+        };
         try {
             const updatedSchool = await schoolDb.findOneAndUpdate(queryText, updateText);
             return res.status(200).json(updatedSchool);
