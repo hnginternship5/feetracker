@@ -8,6 +8,7 @@ const flash = require('connect-flash');
 const session = require('express-session');
 const expressOasGenerator = require('express-oas-generator');
 const path = require('path');
+const passport = require('passport');
 
 const database = require('./config/key').MongoURI;
 var indexRoute = require('./routes/index');
@@ -36,6 +37,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(flash());
 app.use(session({ secret: 'dragonbeast4theTrophy', saveUninitialized: false, resave: false }));
 
+// require passport
+app.use(passport.initialize());
+app.use(passport.session());
 // generate api docs (Swagger)
 // expressOasGenerator.init(app, function(spec) {
 // 	_.set(spec, 'info.title', 'New Title');
