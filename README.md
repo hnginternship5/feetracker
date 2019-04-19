@@ -1,16 +1,13 @@
 # About School Fees Tracker
 
 # Getting Started
-# We assume you already have git, nodejs and npm already installed on your machine
-# Follow the following steps: The symbol '$' that precedes each line means run in terminal
-# NB: If you will not be contributing the the project, ignore step 2 and any comment on pull request
+**We assume you already have git, nodejs and npm already installed on your machine.**
 
-<!-- 1. Fork the repository, clone it.
-2. cd (change directory) into the project folder i.e Fees_tracker
-3. Run `npm install` (on your terminal) to install the dependencies.
-4. Run `npm start` (on your terminal) to run the project.
-5. Go to your browser `localhost:3030` to view the project.
-6. When you make your changes to the repo, push to master and create a pull request, make sure there are no merge conflicts. -->
+**Follow the following steps: The symbol '$' that precedes each line means run in terminal.**
+
+**NB: If you will not be contributing the the project, ignore step 2 and any other comment on pull request.**
+
+Fork the repository first and clone it
 
 1. Fork the repository first and clone and run this:
 
@@ -21,7 +18,8 @@ $ git clone <CLONED_URL>
 2. Add parent repo
 
 ```
-$ git remote add upstream 	https://github.com/hnginternship5/feetracker.git
+$ git remote add upstream https://github.com/hnginternship5/feetracker.git
+
 ```
 
 3. Change into the cloned repo and install dependencies
