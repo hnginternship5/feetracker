@@ -1,18 +1,13 @@
 const express = require('express');
 
 const router = express.Router();
+// import controllers
 const StudentController = require('../controllers/student');
 const ClassController = require('../controllers/class');
 const FeeController = require('../controllers/fee');
 const TermController = require('../controllers/term');
-
-// import controllers
-<<<<<<< HEAD
-var Home = require('../controllers/home');
-var Auth = require('../controllers/auth');
-=======
-const HomeController = require('../controllers/home');
->>>>>>> de68efcb5447f513df16b481af753f7b4875ad57
+var HomeController = require('../controllers/home');
+var AuthController = require('../controllers/auth');
 
 
 // welcome page
@@ -43,16 +38,16 @@ router.get('/dashboard/students', (req, res) => {
 
 router.get('/about', function(req,res,next){
 	res.render('about');
-})
+});
 
 // API routes
 
 // Authentication routes
-router.post('/api/register', Auth.register); // School administrator registration
+router.post('/api/register', AuthController.register); // School administrator registration
 
-router.post('/api/login', Auth.login); // School administrator login
+router.post('/api/login', AuthController.login); // School administrator login
 
-router.get('/api/logout', Auth.logout);
+router.get('/api/logout', AuthController.logout);
 
 // Passport authentication test confirmation
 router.get('/api/profile', isAuthenticated, (req, res) => {
@@ -68,7 +63,7 @@ function isAuthenticated(req, res, next) {
 	else
 	   return res.status(401).send({
 		 error: 'User not authenticated'
-	   })
+	   });
 }
 
 // Updated Router here
@@ -78,6 +73,7 @@ router.get("/", function(req, res, next) {
  Home.find(function(err, fees) {
     res.render("index", { title: "School_fees_tracker"});
   });
+});
 
 // Student Routes
 router.post('/student', StudentController.create);
@@ -98,4 +94,5 @@ router.get('/fees', FeeController.get_all_fees);
 router.post('/term', TermController.create);
 router.get('/term', TermController.get_one_term);
 router.get('/terms', TermController.get_all_terms);
+
 module.exports = router;

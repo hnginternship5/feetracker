@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const bcrypt = require("bcryptjs");
+const bcrypt = require("bcrypt");
 
 const userSchema = new Schema(
     {
@@ -38,7 +38,8 @@ userSchema.methods.toJSON = function() {
         email: this.email,
         school: {
             name: this.school.name,
-            type: this.school.type
+            address: this.school.address,
+            currency: this.school.currency
         }
     };
 };

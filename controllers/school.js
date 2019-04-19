@@ -1,4 +1,4 @@
-const schoolDb = require("./promises").SchoolsDb;
+const schoolDb = require("./promise").SchoolDb;
 
 const School = {
   async create(req, res) {

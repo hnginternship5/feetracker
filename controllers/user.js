@@ -1,4 +1,4 @@
-const userDb = require("./promises").UsersDb;
+const userDb = require("./promise").UserDb;
 
 const Users = {
     async create(req, res, next){

@@ -2,6 +2,7 @@ const Class = require('../models/class');
 const Fee = require('../models/fee');
 const School = require('../models/school');
 const Student = require('../models/student');
+const User = require('../models/user');
 /**
  * @param {string} text
  * @returns {object} return all
@@ -278,9 +279,79 @@ class StudentDb {
     });
   }
 }
+
+// user promise
+//user promise
+class UserDb {
+  static find(param){
+      return new Promise((resolve, reject) => {
+          User.find(param).populate('school')
+          .then((res) => {
+              resolve(res);
+          })
+          .catch((err) => {
+              reject(err);
+          })
+      });
+  }
+
+  static create(param){
+      return new Promise((resolve, reject) => {
+          User.create(param)
+          .then((res) => {
+              resolve(res);
+          })
+          .catch((err) => {
+              reject(err);
+          });
+      });
+  }
+
+  static findOne(param){
+      return new Promise((resolve, reject) => {
+          User.findOne(param).populate('school')
+          .then((res) => {
+              resolve(res);
+          })
+          .catch((err) => {
+              reject(err);
+          });
+      });
+  }
+
+  /**
+   * @param {string} param
+   * @param {string} text
+   * @return {object} returns updated object
+   */
+  static findOneAndUpdate(param, text){
+      return new Promise((resolve, reject) => {
+          User.findOneAndUpdate(param, text).populate('school')
+          .then((res) => {
+              resolve(res);
+          })
+          .catch((err) => {
+              reject(err);
+          });
+      });
+  }
+
+  static findOneAndDelete(param){
+      return new Promise((resolve, reject) => {
+          User.findOneAndDelete(param).populate('school')
+          .then((res) => {
+              resolve(res);
+          })
+          .catch((err) => {
+              reject(err);
+          });
+      });
+  }
+}
 module.exports = {
   ClassDb,
   FeeDb,
   SchoolDb,
   StudentDb,
+  UserDb
 };

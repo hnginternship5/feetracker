@@ -1,5 +1,5 @@
 const LocalStrategy = require('passport-local');
-const userDb = require("../controllers/promises").UsersDb;
+const userDb = require("../controllers/promise").UserDb;
 
 module.exports = function (passport) {
     passport.use(new LocalStrategy({

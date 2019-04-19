@@ -1,18 +1,16 @@
 const validator = require("validator");
 
-const schoolTypes = ['secondary', 'primary'];
-
 function validateSchool(data) {
     var errors = {};
 
     if (validator.isEmpty(data.name)) {
         errors.school_name = "School name is required";
     }
-    if (validator.isEmpty(data.type)) {
-        errors.school_type = "School type is required";
+    if (validator.isEmpty(data.address)) {
+        errors.school_address = "School address is required";
     }
-    else if (!schoolTypes.includes(data.type.toLowerCase())) {
-        errors.school_type = "School type is not valid";
+    if (validator.isEmpty(data.currency)) {
+        errors.school_currency = "School currency is required";
     }
 
     return {
