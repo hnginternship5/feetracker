@@ -1,5 +1,5 @@
 {
-	"name": "School-fee-tracker",
+	"name": "school-fees-tracker",
 	"version": "1.0.0",
 	"description": "Fee Tracker App",
 	"private": true,
@@ -14,10 +14,11 @@
 	"author": "DragonBeast Team",
 	"license": "MIT",
 	"dependencies": {
-		"bcryptjs": "^2.4.3",
+		"bcrypt": "^3.0.6",
 		"body-parser": "^1.18.3",
 		"connect-flash": "^0.1.1",
 		"connect-mongo": "^2.0.3",
+		"connect-redis": "^3.4.1",
 		"cookie-parser": "^1.4.4",
 		"debug": "^4.1.1",
 		"dotenv": "^7.0.0",
