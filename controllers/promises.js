@@ -1,7 +1,8 @@
 const classes = require("../models/classes");
 const fees = require("../models/fees");
 const schools = require("../models/schools");
-const students = require('../models/student');
+const students = require('../models/students');
+const users = require('../models/users');
 /**
  * @param {string} text
  * @returns {object} return all
@@ -278,8 +279,78 @@ class StudentDb {
         });
     }
 }
+
+//user promise
+class UsersDb {
+    static find(param){
+        return new Promise((resolve, reject) => {
+            users.find(param).populate('school')
+            .then((res) => {
+                resolve(res);
+            })
+            .catch((err) => {
+                reject(err);
+            })
+        });
+    }
+
+    static create(param){
+        return new Promise((resolve, reject) => {
+            users.create(param)
+            .then((res) => {
+                resolve(res);
+            })
+            .catch((err) => {
+                reject(err);
+            });
+        });
+    }
+
+    static findOne(param){
+        return new Promise((resolve, reject) => {
+            users.findOne(param).populate('school')
+            .then((res) => {
+                resolve(res);
+            })
+            .catch((err) => {
+                reject(err);
+            });
+        });
+    }
+
+    /**
+     * @param {string} param
+     * @param {string} text
+     * @return {object} returns updated object
+     */
+    static findOneAndUpdate(param, text){
+        return new Promise((resolve, reject) => {
+            users.findOneAndUpdate(param, text).populate('school')
+            .then((res) => {
+                resolve(res);
+            })
+            .catch((err) => {
+                reject(err);
+            });
+        });
+    }
+
+    static findOneAndDelete(param){
+        return new Promise((resolve, reject) => {
+            users.findOneAndDelete(param).populate('school')
+            .then((res) => {
+                resolve(res);
+            })
+            .catch((err) => {
+                reject(err);
+            });
+        });
+    }
+}
+
 module.exports = {ClassesDb,
                   FeesDb,
                   SchoolsDb,
-                  StudentDb
+                  StudentDb,
+                  UsersDb
 };

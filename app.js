@@ -8,6 +8,7 @@ const flash = require('connect-flash');
 const session = require('express-session');
 const expressOasGenerator = require('express-oas-generator');
 const path = require('path');
+const passport = require("passport");
 
 const database = require('./config/key').MongoURI;
 var indexRoute = require('./routes/index');
@@ -42,6 +43,9 @@ app.use(session({ secret: 'dragonbeast4theTrophy', saveUninitialized: false, res
 // 	_.set(spec, "paths['/path'].get.parameters[0].example", 2);
 // 	return spec;
 // });
+
+app.use(passport.initialize());
+require('./config/passport')(passport);
 
 // connect to database
 mongoose.connect(database, { useNewUrlParser: true }, function(err, client) {
