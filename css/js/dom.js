@@ -1,12 +1,11 @@
 
 
-
-var tweets = document.getElementById('tweet').innerHTML	 ='10k';
+const tweets = document.getElementById('tweet').innerHTML	 = '10k';
 console.log(tweets);
 
 
-for(var i = 0; i < tweets.length; i++){
-		console.log(tweets);
+for (let i = 0; i < tweets.length; i++) {
+  console.log(tweets);
 }
 
 
@@ -49,7 +48,7 @@ for(var i = 0; i < tweets.length; i++){
 // var option = 4;
 
 // switch (option) {
-// 	case 1: 
+// 	case 1:
 // 	console.log('what may not be');
 // 	break;
 
@@ -57,7 +56,7 @@ for(var i = 0; i < tweets.length; i++){
 // 	console.log('what is to gain');
 // 	break;
 
-// 	case 3: 
+// 	case 3:
 // 	console.log('are you okay?');
 // 	break;
 
@@ -83,7 +82,7 @@ for(var i = 0; i < tweets.length; i++){
 
 // console.log(isGoing);
 
-// 
+//
 
 
 // var object = "nife";
@@ -103,18 +102,6 @@ for(var i = 0; i < tweets.length; i++){
 // }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 // //fall-through statement w/o break on each case;
 // var output = "";
 // var tier = 1;
@@ -130,7 +117,7 @@ for(var i = 0; i < tweets.length; i++){
 
 // 	case 3:
 // 	output += " i'll rule the world";
-	
+
 
 // 	default:
 // 	output += " i'll always be king";
@@ -151,8 +138,8 @@ for(var i = 0; i < tweets.length; i++){
 // 	}else{
 // 		console.log(x + " black areoa");
 // 	}
-// 	x++;	
-// } 
+// 	x++;
+// }
 
 
 // var time = 60;
@@ -183,46 +170,38 @@ for(var i = 0; i < tweets.length; i++){
 // }
 
 
-
 // for(var x = 1; x < 10; x++){
 // 	console.log(x);
 // }
 
 
+// var opt = "throw thy might ";
+// var klm;
 
+// switch (opt){
+// 	case "the false king":
+// 	klm = "show me thy face";
+// 	break;
 
+// 	case "who you think me to be":
+// 	klm = "see no one";
+// 	break;
 
+// 	case "throw thy might ":
+// 	klm = "never be right";
+// 	break;
 
+// 	case "i am":
+// 	klm  = "mercy of kings";
+// 	break;
 
+// 	default:
+// 	klm ="hahahahahahaha";
+// }
 
+// console.log(opt + klm);
 
-	// var opt = "throw thy might ";
-	// var klm; 
-
-	// switch (opt){
-	// 	case "the false king":
-	// 	klm = "show me thy face";
-	// 	break;
-
-	// 	case "who you think me to be":
-	// 	klm = "see no one";
-	// 	break;
-
-	// 	case "throw thy might ":
-	// 	klm = "never be right";
-	// 	break;
-
-	// 	case "i am":
-	// 	klm  = "mercy of kings";
-	// 	break;
-
-	// 	default:
-	// 	klm ="hahahahahahaha";
-	// }
-
-	// console.log(opt + klm);
-
-	//fall-through
+// fall-through
 
 // var tier = "Ragnar";
 // var output = "All the gold is mine and ";
@@ -249,7 +228,6 @@ for(var i = 0; i < tweets.length; i++){
 // console.log(output);
 
 
-
 // var x = "99";
 
 // while(x >= 1){
@@ -265,7 +243,7 @@ for(var i = 0; i < tweets.length; i++){
 // while(y <= 60){
 
 // 		console.log(y);
-	
+
 
 // 	y++;
 // }
@@ -333,8 +311,6 @@ for(var i = 0; i < tweets.length; i++){
 // }
 
 
-
-
 // for(var fact = 1; fact < 10; fact++){
 // 	sol *= fact;
 // }
@@ -366,14 +342,9 @@ for(var i = 0; i < tweets.length; i++){
 // 	opp += " i'm game"
 
 
-
-
-
-
 // }
 
 // console.log( opt +" "+ opp);
-
 
 
 // for(var row = 0; row <= 35; row++){
@@ -392,7 +363,6 @@ for(var i = 0; i < tweets.length; i++){
 // console.log(sol);
 
 
-
 // var sol = 12;
 // var fact = 1;
 
@@ -403,13 +373,12 @@ for(var i = 0; i < tweets.length; i++){
 // }
 
 
-
 // var num = 1;
 
 // switch (num){
 // 	case 1:
 // 	num = "great";
-	
+
 
 // 	case 2:
 // 	num = "kings"
@@ -446,7 +415,6 @@ for(var i = 0; i < tweets.length; i++){
 // }
 
 
-
 // for(var x = 1; x <=25; x++){
 // 	for(var y = 1; y <=99; y++){
 // 		console.log(x +"-"+y);
@@ -454,7 +422,7 @@ for(var i = 0; i < tweets.length; i++){
 // }
 
 
-// var goal = 5; 
+// var goal = 5;
 
 
 // switch (goal){
@@ -473,7 +441,6 @@ for(var i = 0; i < tweets.length; i++){
 // console.log(goal);
 
 
-
 // var count = 1;
 // var sount = " shall we";
 
@@ -485,7 +452,6 @@ for(var i = 0; i < tweets.length; i++){
 // }else{
 // 	console.log("rise t'f up");
 // }
-
 
 
 // function sayHello(x, y){
@@ -595,8 +561,6 @@ for(var i = 0; i < tweets.length; i++){
 // titleMov(favMovie, " i'm a beast");
 
 
-
-
 // var createMov = function makeMov(movieName){
 // 	console.log("new movie " + movieName);
 // }
@@ -623,12 +587,11 @@ for(var i = 0; i < tweets.length; i++){
 // console.log(seat());
 
 // var back = function (l){
-	
+
 
 // 	return l + 1
 
 // }
-
 
 
 // console.log(back(6));
@@ -662,7 +625,6 @@ for(var i = 0; i < tweets.length; i++){
 // console.log(car.model);
 
 
-
 // var breakfast = {
 // 	name: ["The lumberjack", " The socks, " ],
 // 	price: "$9.95",
@@ -679,7 +641,6 @@ for(var i = 0; i < tweets.length; i++){
 // console.log(breakfast.addName());
 
 
-
 // //OBJECTS
 
 // var donuts = [
@@ -692,9 +653,6 @@ for(var i = 0; i < tweets.length; i++){
 // donuts.forEach(function(donut){
 // 	console.log(donut.type +" donuts costs $"+ donut.cost +" each!");
 // });
-
-
-
 
 
 // var facebook = {
@@ -716,7 +674,7 @@ for(var i = 0; i < tweets.length; i++){
 // 		// 	inc +=  3000;
 
 // 		// }
-			
+
 // 		return facebook.friends += 90;
 // 	},
 
@@ -734,99 +692,93 @@ for(var i = 0; i < tweets.length; i++){
 // console.log(facebook.postMessage(7));
 
 
-function movies(myFunction, name){
-	myFunction(name);
+function movies(myFunction, name) {
+  myFunction(name);
 }
 
-movies(function displayMovie(movieName){
-	console.log("i was watching "+ movieName)
-}, " back to the west");
+movies((movieName) => {
+  console.log(`i was watching ${movieName}`);
+}, ' back to the west');
 
 
-
-function emotions(myString, myFunc){
-	console.log("i am "+ myString +", "+ myFunc(2));
+function emotions(myString, myFunc) {
+  console.log(`i am ${myString}, ${myFunc(2)}`);
 }
 
 
-emotions("happy", function laugh(ha){
-	var sound = "";
-	for(var i = 0; i < ha; i++){
-		sound += "ha";
-	}
-	return sound + "!";
+emotions('happy', (ha) => {
+  let sound = '';
+  for (let i = 0; i < ha; i++) {
+    sound += 'ha';
+  }
+  return `${sound}!`;
 });
 
 
-function makeLine(length){
-	var line = "";
-	for(var x = 1; x <= length; x++){
-		line += "* ";
-	}
-	return line + "\n"
+function makeLine(length) {
+  let line = '';
+  for (let x = 1; x <= length; x++) {
+    line += '* ';
+  }
+  return `${line}\n`;
 }
 
-function makeTriangle(num){
-	var str = "";
-	for(var y = 1; y <= num; y++){
-		str += makeLine(y);
-	}
-	return str;
+function makeTriangle(num) {
+  let str = '';
+  for (let y = 1; y <= num; y++) {
+    str += makeLine(y);
+  }
+  return str;
 }
 
 console.log(makeTriangle(10));
 
 
-
-var cry = function emotion(){
-	return "boohoo!"
-}
+const cry = function emotion() {
+  return 'boohoo!';
+};
 
 
 console.log(cry());
 
 
+const catSys = function (max) {
+  let catMsg = '';
+  for (let i = 0; i < max; i++) {
+    catMsg += 'meow!!! ';
+  }
 
-var catSys = function(max){
-	var catMsg = "";
-	for(var i = 0; i < max; i++){
-		catMsg += "meow!!! "
-	}
+  return catMsg;
+};
 
-	return catMsg;
+function helloCat(callBackFunction) {
+  return `hello... ${callBackFunction(9)}`;
 }
-
-function helloCat(callBackFunction){
-	return "hello... " + callBackFunction(9);
-}
-
 
 
 console.log(helloCat(catSys));
 
 var umbrella = {
-	color: "red",
-	isOpen: true,
-	open: function(){
-		if(umbrella.isOpen === true){
-			return "umbrella is open";
-		}else{
-			umbrella.isOpen = true;
-			return "umbrella is already open";
-		}
-	},
+  color: 'red',
+  isOpen: true,
+  open() {
+    if (umbrella.isOpen === true) {
+      return 'umbrella is open';
+    }
+    umbrella.isOpen = true;
+    return 'umbrella is already open';
+  },
 
-	isClose: false,
-	close: function(){
-		if (umbrella.isClose === true) {
-			return "umbrella is closed"
-		}else{
-			umbrella.isOpen = false;
-			umbrella.isClose = true;
-			return "im closed";
-		}
-	}
-}
+  isClose: false,
+  close() {
+    if (umbrella.isClose === true) {
+      return 'umbrella is closed';
+    }
+    umbrella.isOpen = false;
+    umbrella.isClose = true;
+    return 'im closed';
+  },
+};
 
 
 console.log(umbrella.close());
@@ -838,8 +790,7 @@ console.log(umbrella.close());
 // }
 
 
-
-//function declaration
+// function declaration
 
 // function sayHello(){
 // 	var greeting = "hello";
@@ -935,7 +886,6 @@ console.log(umbrella.close());
 // sell(tat);
 
 
-
 // function add(){
 // 	var msg = "tell C>B ";
 // 	return msg + "i am ready";
@@ -973,7 +923,6 @@ console.log(umbrella.close());
 // }
 
 // level(code, " games for you");
-
 
 
 // /////////////////////////////////
@@ -1080,33 +1029,33 @@ console.log(umbrella.close());
 
 // /////////////////////////////////////
 
-var tap = function tape(moves){
-	var likes = "";
-	for (var j = 1; j <= moves; j++){
-		likes += "li";
-	}
-	return likes;
+const tap = function tape(moves) {
+  let likes = '';
+  for (let j = 1; j <= moves; j++) {
+    likes += 'li';
+  }
+  return likes;
+};
+
+function cap(callGt, lol) {
+  console.log(`cocaino ${callGt(3)}${lol}`);
 }
 
-function cap(callGt, lol){
-	console.log("cocaino " + callGt(3) + lol);
-}
-
-cap(tap, " cocaino");
+cap(tap, ' cocaino');
 
 // ///////////////////////////////////////
 
 
-var pops = function rex(paw){
-	console.log("Real boys " + paw);
+const pops = function rex(paw) {
+  console.log(`Real boys ${paw}`);
+};
+
+
+function tray(uno, pass) {
+  uno(pass);
 }
 
-
-function tray(uno, pass){
-	uno(pass);
-}
-
-tray(pops, "work hard!");
+tray(pops, 'work hard!');
 
 // ////////////////////////////////////////
 
@@ -1165,8 +1114,6 @@ tray(pops, "work hard!");
 // }
 
 
-
-
 // cakes.forEach(print);
 
 // var cakes = ["vice", " yikes", "treis", "rewa"];
@@ -1177,13 +1124,10 @@ tray(pops, "work hard!");
 // })
 
 
-
-
 // //string index
 // var cal = "Kol  oer0";
 
 // console.log(cal[6]);
-
 
 
 // var object = {
@@ -1260,7 +1204,6 @@ tray(pops, "work hard!");
 // console.log(cou());
 
 
-
 // var leti = function(kika){
 // 	console.log("I hope for", kika);
 // }
@@ -1271,8 +1214,6 @@ tray(pops, "work hard!");
 // }
 
 // uber(leti, "the very best", );
-
-
 
 
 // function killjoy(pike, polis){
@@ -1326,7 +1267,6 @@ tray(pops, "work hard!");
 // hij(sqe, "cum");
 
 
-
 // //advance inline
 
 // function hip(kijo, mill){
@@ -1339,406 +1279,373 @@ tray(pops, "work hard!");
 // }, "boobs");
 
 
-
 // call back function
 
-let ik = function leti(olo){
-	let me = "";
-	for(let i = 1; i <= olo; i++){
-		me += "da";
-	}
-	return me + "!";
+const ik = function leti(olo) {
+  let me = '';
+  for (let i = 1; i <= olo; i++) {
+    me += 'da';
+  }
+  return `${me}!`;
 };
 
-let juke = function lom(kim){
-	console.log("i am", kim(2));
+const juke = function lom(kim) {
+  console.log('i am', kim(2));
 };
 
 juke(ik);
 
-//inline function part 1
-horn(crow, "fucks");
-function horn(like, mike){
-	like(mike);
+// inline function part 1
+horn(crow, 'fucks');
+function horn(like, mike) {
+  like(mike);
 }
 
-function crow(bank){
-	console.log("moles are real", bank);
+function crow(bank) {
+  console.log('moles are real', bank);
 }
 
 
-function hork(rio, kille){
-	rio(kille);
-};
-
-hork(function(hire){
-	console.log("i am the king of", hire);
-}, "norway");
-
-
-
-
-function jas(giv){
-	let dc = "";
-	for(let i = 1; i <= giv; i++){
-		dc += "x"; 
-	}
-	return dc;
+function hork(rio, kille) {
+  rio(kille);
 }
 
-function op(gb){
-	console.log("call me", gb(3));
+hork((hire) => {
+  console.log('i am the king of', hire);
+}, 'norway');
+
+
+function jas(giv) {
+  let dc = '';
+  for (let i = 1; i <= giv; i++) {
+    dc += 'x';
+  }
+  return dc;
+}
+
+function op(gb) {
+  console.log('call me', gb(3));
 }
 
 op(jas);
 
 
-function jor(loz, men){
-	loz(men);
-};
-
-function nan(ass){
-	console.log("for all is equal", ass)
-};
-
-jor(nan, "to nothing");
-
-
-
-function arse(boobs, ass){
-	boobs(ass);
+function jor(loz, men) {
+  loz(men);
 }
 
-arse(function(nack){
-	console.log("i love big", nack);
-}, "ass & boobs");
-
-
-
-function ret(hert, loh){
-	hert(loh);
+function nan(ass) {
+  console.log('for all is equal', ass);
 }
 
+jor(nan, 'to nothing');
 
-function we(nik){
-	console.log("Retro", nik);
+
+function arse(boobs, ass) {
+  boobs(ass);
+}
+
+arse((nack) => {
+  console.log('i love big', nack);
+}, 'ass & boobs');
+
+
+function ret(hert, loh) {
+  hert(loh);
 }
 
 
-ret(we, "boss");
+function we(nik) {
+  console.log('Retro', nik);
+}
 
 
-function yew(mae, bae){
-	mae(bae);
-};
-
-yew(function tir(val){
-	console.log("i am solidad", val)
-}, "lol");
+ret(we, 'boss');
 
 
-let kills = ["re", "lol", "js"];
+function yew(mae, bae) {
+  mae(bae);
+}
 
-kills.push("over") ;
-function meat(kill){
-	kill += "ady";
-	console.log(kill);
-};
+yew((val) => {
+  console.log('i am solidad', val);
+}, 'lol');
+
+
+const kills = ['re', 'lol', 'js'];
+
+kills.push('over');
+function meat(kill) {
+  kill += 'ady';
+  console.log(kill);
+}
 
 kills.forEach(meat);
 
 
-kills.forEach(function(nim, lol, kil){
-	nim += " rem";
-	kil += "count"
-	lol += "we"
-	console.log(nim, lol, kil);
-})
+kills.forEach((nim, lol, kil) => {
+  nim += ' rem';
+  kil += 'count';
+  lol += 'we';
+  console.log(nim, lol, kil);
+});
 
 
-
-
-
-function zam(xic, him){
-		xic(him);
-};
-
-zam(function leq(name){
-	console.log(name, "Restore this");
-}, "i am alive");
-
-
-
-function hou(matrr){
-	var msg = "pop"
-	return msg;
+function zam(xic, him) {
+  xic(him);
 }
 
-function piy(cam){
-	console.log("i am just not", cam())
+zam((name) => {
+  console.log(name, 'Restore this');
+}, 'i am alive');
+
+
+function hou(matrr) {
+  const msg = 'pop';
+  return msg;
+}
+
+function piy(cam) {
+  console.log('i am just not', cam());
 }
 
 
 piy(hou);
 
 
+const girl = {};
 
-let girl = {};
+girl.age = 19;
+girl.features = { boobs: true, ass: true };
+girl.height = 196;
+girl.hoobies = function (call) {
+  console.log(`my fav hobby is sucking ${call}`);
+};
 
-girl.age = 19
-girl.features= {boobs: true, ass: true}
-girl.height= 196
-girl.hoobies = function(call){
-	console.log(`my fav hobby is sucking ${call}`);
-}
-
-girl.likes = function(){
-
-	console.log(`this is how i know ${this.hoobies('boobs')}`);
-	
-}
-
-
-
-console.log(girl.likes())
-
-
-//const myArray =[function alerter(){alert('hello');}];
-
-//myArray[0]();
-
-
-var hip = (function jose(ioi){
-	let kool = 0;
-
-	return function(){
-		kool += 1;
-
-		return kool;
-	}
-})();
-
-console.log(hip())
-
-
-function iki(){
-	 var wer = ""; 
-
-	 return function(){
-	 	wer += "opertation"
-
-	 	return wer;
-	 }();
+girl.likes = function () {
+  console.log(`this is how i know ${this.hoobies('boobs')}`);
 };
 
 
-console.log(iki())
+console.log(girl.likes());
 
 
+// const myArray =[function alerter(){alert('hello');}];
+
+// myArray[0]();
 
 
+const hip = (function jose(ioi) {
+  let kool = 0;
 
-function xiv(nam, jix){
-	nam(jix)
+  return function () {
+    kool += 1;
+
+    return kool;
+  };
+}());
+
+console.log(hip());
+
+
+function iki() {
+	 let wer = '';
+
+	 return (function () {
+	 	wer += 'opertation';
+
+	 	return wer;
+	 }());
 }
 
-function zix(name){
-	console.log( "vert");
+
+console.log(iki());
+
+
+function xiv(nam, jix) {
+  nam(jix);
+}
+
+function zix(name) {
+  console.log('vert');
 }
 
 zix(xiv);
 
 
-var tick = function ello(name){
-	var xi = "";
-	for(var x = 1; x < name; x++){
-		xi = "vo";
-	}
-	return xi + "!";
+const tick = function ello(name) {
+  let xi = '';
+  for (let x = 1; x < name; x++) {
+    xi = 'vo';
+  }
+  return `${xi}!`;
+};
+
+
+function quill(jinks) {
+  console.log(`cum${jinks(3)}`);
 }
 
-
-function quill(jinks){
-	console.log("cum" + jinks(3));
-}
-
-quill(tick)
+quill(tick);
 
 
+const dex = function (qas) {
+  let jan = '';
+  for (let i = 1; i <= qas; i++) {
+    jan += 'ja';
+  }
+  return jan;
+};
 
-let dex = function(qas){
-	let jan = "";
-	for(let i = 1; i <= qas; i++){
-		jan += "ja";
-	}
-	return jan;
-}
-
-function uh(mew){
-	console.log("tole", mew(2));
+function uh(mew) {
+  console.log('tole', mew(2));
 }
 
 
 uh(dex);
 
-function fvck(){
-	var x = 7
+function fvck() {
+  const x = 7;
 
-	return x* 7;
+  return x * 7;
 }
 
-function me(lase){
-	console.log("crack" + lase())
+function me(lase) {
+  console.log(`crack${lase()}`);
 }
 
 me(fvck);
 
 
-function ten(yil, ill){
-	yil(ill)
+function ten(yil, ill) {
+  yil(ill);
 }
 
 
-ten(function ride(groov){
-	console.log("diks" + groov)
-}, "rainbow");
+ten((groov) => {
+  console.log(`diks${groov}`);
+}, 'rainbow');
 
 
-
-function twe(kiss){
-	console.log("ilo", kiss);
+function twe(kiss) {
+  console.log('ilo', kiss);
 }
 
 
-function jam(likee, manee){
-	likee(manee);
+function jam(likee, manee) {
+  likee(manee);
 }
 
-jam(twe, "i dey alright");
+jam(twe, 'i dey alright');
 
 
-function replay(dir, callback){
-	for(let i = 0; i < dir.length; i++){
-		if(callback(dir[i] )){
-			console.log(dir[i]+ " i'm sexy"); 
-		}
-	}
-
+function replay(dir, callback) {
+  for (let i = 0; i < dir.length; i++) {
+    if (callback(dir[i])) {
+      console.log(`${dir[i]} i'm sexy`);
+    }
+  }
 }
 
 
-function vipe(x){
-	return x > 2*2;
+function vipe(x) {
+  return x > 2 * 2;
 }
 
 replay([2, 3, 5, 9, 4], vipe);
 
 
-function nev(constant){
-	var kill = "pitch";
-	console.log(kill + constant);
-	return kill
+function nev(constant) {
+  const kill = 'pitch';
+  console.log(kill + constant);
+  return kill;
 }
 
-function old(maaw){
-	if(maaw > 5){
-		console.log("suck my balls"  );
-	}else{
-		console.log("i'll pass" )
-	}
-
-}
-
-
-
-nev(old(9), "sold");
-
-
-var welo = "killmonger"
-
-function time(){
-	const me = "Black Panther";
-
-	 function clock(){
-		console.log(`hello, ${welo} meet ${me}`);
-	
-	}
-		return clock()
-}
-
- time();
-
-
-
-
-function count(){
-	let count = 10;
-
-	return function(loop){
-		console.log(count + loop)
-	};
-
-
+function old(maaw) {
+  if (maaw > 5) {
+    console.log('suck my balls');
+  } else {
+    console.log("i'll pass");
+  }
 }
 
 
-const iloq = count()
-iloq(10)
+nev(old(9), 'sold');
 
 
-//closure &&& scope
-var tiny = " 9inch"
+const welo = 'killmonger';
 
-function bright(){
+function time() {
+  const me = 'Black Panther';
 
-	let big = " 15inch";
+	 function clock() {
+    console.log(`hello, ${welo} meet ${me}`);
+  }
+  return clock();
+}
 
-	function dark(){
-		console.log(`hello, my banana is ${tiny} in length and ${big} in girth, thank you for coming to my pep talk`)
-	}
+time();
 
-	return dark()
+
+function count() {
+  const count = 10;
+
+  return function (loop) {
+    console.log(count + loop);
+  };
 }
 
 
-bright()
+const iloq = count();
+iloq(10);
+
+
+// closure &&& scope
+const tiny = ' 9inch';
+
+function bright() {
+  const big = ' 15inch';
+
+  function dark() {
+    console.log(`hello, my banana is ${tiny} in length and ${big} in girth, thank you for coming to my pep talk`);
+  }
+
+  return dark();
+}
+
+
+bright();
 
 
 // garbaging returned function
 
-function vike(){
-	let nih = 2;
+function vike() {
+  const nih = 2;
 
-	return function (nul){
-		console.log(nih * nul)
-	}
-
+  return function (nul) {
+    console.log(nih * nul);
+  };
 }
 
-const q2 = vike()
-q2(102)
+const q2 = vike();
+q2(102);
 
 
+const zill = (function (sum) {
+  let i = 0;
+  for (i = 1; i <= sum; i++) {
+    if (i % 2 === 0) {
+      console.log('BLUE');
+    } else {
+      console.log('GREEN');
+    }
+  }
 
-var zill = (function(sum){
-	var  i = 0;
-	for(i = 1; i <= sum; i++){ 
-		if(i % 2 === 0){
-			console.log("BLUE")
-		}else{
-			console.log("GREEN")
-		}
-		
-	}
+  // return i
+}(10));
 
-	//return i
-})(10);
-
-(function price(){
-	var ted = "Clarence";
-	console.log(`${ted} is savage`);
-	return ted;
-})()
-
-
-
+(function price() {
+  const ted = 'Clarence';
+  console.log(`${ted} is savage`);
+  return ted;
+}());
