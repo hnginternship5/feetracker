@@ -3,6 +3,7 @@
 # Getting Started
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 **We assume you already have git, nodejs and npm already installed on your machine
 Follow the following steps: The symbol '$' that precedes each line means run in terminal
 NB: If you will not be contributing the the project, ignore step 2 and any other comment on pull request**
@@ -22,14 +23,22 @@ NB: If you will not be contributing the the project, ignore step 2 and any other
 >>>>>>> parent of 46796b7... updated README.md
 
 Fork the repository first and clone it
+=======
+**We assume you already have git, nodejs and npm already installed on your machine
+Follow the following steps: The symbol '$' that precedes each line means run in terminal
+NB: If you will not be contributing the the project, ignore step 2 and any other comment on pull request**
+
+1. Fork the repository first and clone and run this:
+>>>>>>> 02ee452fafc270b777a11cad57898cf33b284575
 
 ```
-git clone CLONE_URL
+$ git clone <CLONED_URL>
 ```
 
-Change into cloned repo and install dependencies
+2. Add parent repo
 
 ```
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 $ git remote add upstream https://github.com/hnginternship5/feetracker.git
@@ -39,15 +48,23 @@ npm install (on your terminal)
 =======
 npm install (on your terminal)
 >>>>>>> parent of 46796b7... updated README.md
+=======
+$ git remote add upstream https://github.com/hnginternship5/feetracker.git
+>>>>>>> 02ee452fafc270b777a11cad57898cf33b284575
 ```
 
-Start the project
-
+3. Change into the cloned repo and install dependencies
 ```
-npm start (on your terminal)
+$ cd Fees-tracker
+$ npm install
 ```
 
-Visit `http://localhost:3030` to view the project.
+4. Start the project
+```
+$ npm start
+```
+
+5. Visit `http://localhost:3030`  on your prefered web browser to view the project.
 
 **NOTES:**
 
