@@ -1,9 +1,9 @@
 # About School Fees Tracker
 
 # Getting Started
-**We assume you already have git, nodejs and npm already installed on your machine**
-**Follow the following steps: The symbol '$' that precedes each line means run in terminal**
-**NB: If you will not be contributing the the project, ignore step 2 and any other comment on pull request**
+**We assume you already have git, nodejs and npm already installed on your machine.**
+**Follow the following steps: The symbol '$' that precedes each line means run in terminal.**
+**NB: If you will not be contributing the the project, ignore step 2 and any other comment on pull request.**
 
 Fork the repository first and clone it
 
