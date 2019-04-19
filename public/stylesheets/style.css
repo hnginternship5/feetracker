@@ -1,4 +1,28 @@
 
+
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #A92E65;
+}
+
+::-webkit-scrollbar
+{
+    width: 15px;
+    background-color: #A92E65;
+}
+
+::-webkit-scrollbar-thumb
+{
+    background-color: #FC954F;
+    background-image: -webkit-linear-gradient(90deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,transparent 75%, transparent)
+}
+
+
+	.view-more {
+		cursor: pointer !important;
+	}
+
 ul{
 	list-style: none;
 	padding: 0;
@@ -79,7 +103,7 @@ header{
 .reg_desktop:hover{
   background: white;
   color: #A92E65 !important;
-  
+
 }
 
 
@@ -226,7 +250,7 @@ header{
 /* Footer  */
 
 footer{
-  
+
 }
 
 footer h5{
@@ -237,7 +261,7 @@ footer h5{
 footer p, footer a{
   color: rgb(141, 141, 141);
   transition: .3s ease all;
-  
+
 }
 
 footer a:hover{
