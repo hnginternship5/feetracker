@@ -8,14 +8,134 @@
 			cursor: pointer !important;
 		}
 		
+		.mobile-wrapper{
+			margin: 2rem 2rem 0 2rem;
+		}
 		
+		
+		#menuToggle {
+			display: block;
+			position: relative;
+			top: 20px;
+			z-index: 1;
+			-webkit-user-select: none;
+			user-select: none;
+		}
+
+		#menuToggle input {
+			display: block;
+			width: 40px;
+			height: 32px;
+			position: absolute;
+			top: -7px;
+			right: -5px;
+			cursor: pointer;
+			opacity: 0; 
+			z-index: 2; 
+			-webkit-touch-callout: none;
+		}
+
+		#menuToggle span {
+			display: block;
+			width: 33px;
+			height: 4px;
+			margin-bottom: 5px;
+			position: relative;
+			background: #cdcdcd;
+			border-radius: 3px;
+			z-index: 1;
+			transform-origin: 4px 0px;
+			transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+						background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+						opacity 0.55s ease;
+		}
+
+		#menuToggle span:first-child {
+			transform-origin: 0% 0%;
+		}
+
+		#menuToggle span:nth-last-child(2) {
+			transform-origin: 0% 100%;
+		}
+
+		#menuToggle input:checked ~ span {
+			opacity: 1;
+			transform: rotate(45deg) translate(-2px, -1px);
+			background: rgb(134, 36, 80);
+		}
+
+		#menuToggle input:checked ~ span:nth-last-child(3) {
+			opacity: 0;
+			transform: rotate(0deg) scale(0.2, 0.2);
+		}
+
+		#menuToggle input:checked ~ span:nth-last-child(2) {
+			transform: rotate(-45deg) translate(0, -1px);
+		}
+
+		#menu {
+			position: fixed;
+			right: 0;
+			width: 250px;
+			margin: -100px 0 0 -50px;
+			padding: 50px;
+			padding-top: 125px;
+			height: 100vh;
+			background: #FFE6D4;
+			list-style-type: none;
+			-webkit-font-smoothing: antialiased;
+			transform-origin: 0% 0%;
+			transform: translate(100%, 0);
+			transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+		}
+
+		.menu-link{
+			color: rgb(134, 36, 80);
+		}
+
+		.menu-link:hover{
+			text-decoration: none;
+			color: #A92E65;
+		}
+
+		#menu li {
+			padding: 10px 0;
+			font-size: 22px;
+		}
+
+		#menuToggle input:checked ~ ul {
+			transform: none;
+		}
+
+		.d-flx{
+			display: flex;
+		}
+
+		.j-c-sb{
+			justify-content: space-between;
+		}
 	</style>
 </head>
 
-{{!-- Sidebar Mobile Wrapper --}}
-<div class="mobile-wrapper">
-
-</div>
+	{{!-- Sidebar Mobile Wrapper --}}
+	<div class="mobile-wrapper d-flx j-c-sb">
+		<a class="navbar-brand" href="#">
+			<img src="/images/logo.png" alt="logo">
+		</a>
+		<div id="menuToggle">
+			<input type="checkbox" />
+			<span></span>
+			<span></span>
+			<span></span>
+			
+			<ul id="menu">
+				<li><a href="/" class="menu-link">Home</a></li>
+				<li><a href="/about" class="menu-link">About Us</a></li>
+				<li><a href="/login" class="menu-link">Log in</a></li>
+				<li><a href="/register" class="menu-link">Register</a></li>
+			</ul>
+		</div>
+	</div>
 
 {{> header }}
 <header>

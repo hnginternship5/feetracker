@@ -98,6 +98,11 @@ header{
     background: #fff
 }
 
+@media only screen and (max-width: 768px){
+  #desktop_nav_wrapper{
+      display: none;
+  }
+}
 #desktop_nav_wrapper .nav-link{
   display: inline;
   color: rgb(73, 71, 71);
