@@ -5,6 +5,7 @@ const StudentController = require('../controllers/student');
 const ClassController = require('../controllers/class');
 const FeeController = require('../controllers/fee');
 const TermController = require('../controllers/term');
+const studentValidations = require('../validation/student.validation.js')
 
 // import controllers
 const HomeController = require('../controllers/home');
@@ -41,7 +42,7 @@ router.get('/about', (req, res) => {
 });
 
 // Student Routes
-router.post('/student', StudentController.create);
+router.post('/student', studentValidations.sanitizeAndValidateStudents,  StudentController.create);
 router.get('/student', StudentController.get_one_student);
 router.get('/student', StudentController.get_all_students);
 

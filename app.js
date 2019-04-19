@@ -11,6 +11,7 @@ const flash = require('connect-flash');
 const path = require('path');
 // const RedisStore = require('connect-redis')(session);
 const passport = require('passport');
+var expressValidator = require('express-validator');
 
 
 const database = require('./config/key').MongoURI;
@@ -70,6 +71,7 @@ db.on('error', console.error.bind(console, 'Mongodb connection error:'));
 
 // API ROUTES
 app.use('/', indexRoute);
+app.use(expressValidator());
 
 // Express will serve up 404 file if a route is not recognized
 app.get('*', (req, res) => {
