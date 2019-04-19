@@ -27,9 +27,9 @@ const studentSchema = new Schema({
     type: String,
     required: true,
   },
-  amount_paid: {
-    type: Number,
-    required: true,
+  account_id: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Account',
   },
   class_id: {
     type: mongoose.Schema.Types.ObjectId,

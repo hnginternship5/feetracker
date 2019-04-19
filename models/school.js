@@ -12,6 +12,9 @@ const schoolSchema = new Schema({
   address: {
     type: String,
   },
+  currency: {
+    type: String,
+  },
 });
 
 module.exports = mongoose.model('School', schoolSchema);
