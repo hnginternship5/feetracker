@@ -1,14 +1,12 @@
 const feeDb = require("./feePromise");
-const classModel = require("../models/classes");
-const schoolModel = require("../models/schools");
+const classModel = require("../models/class");
+const schoolModel = require("../models/school");
 const termModel = require("../models/term");
 
 const Fees = {
     async create(req, res, next){
         const queryText = {
             amount: req.body.amount,
-            class_id: req.body.class_id,
-            school_id: req.body.school_id,
             term: req.body.term
         };
         try {
@@ -63,5 +61,7 @@ const Fees = {
         }catch(error){
             return res.status(400).send(error);
         }
-    }
-}
+    },
+};
+
+module.exports = Fee;

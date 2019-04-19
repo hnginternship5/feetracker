@@ -1,13 +1,11 @@
 const classDb = require("./classPromise");
-const classModel = require("../models/schools");
-const feeModel = require("../models/fees");
+const classModel = require("../models/school");
+const feeModel = require("../models/fee");
 
 const Classes = {
     async create(req, res, next){
         const queryText = {
-            school_id: req.body.school_id,
-            name: req.body.name,
-            fee: req.body.fee
+            name: req.body.name
         };
         try {
             const createdClass = await classDb.create(queryText);
@@ -85,5 +83,7 @@ const Classes = {
         }catch(error){
             return res.status(400).send(error);
         }
-    }
-}
+    }, 
+};
+
+module.exports = Class;

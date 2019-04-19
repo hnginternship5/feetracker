@@ -1,16 +1,20 @@
+/* eslint-disable no-console */
 const express = require('express');
 const mongoose = require('mongoose');
 const exphbs = require('express-handlebars');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-const _ = require('lodash');
+// const _ = require('lodash');
 const flash = require('connect-flash');
-const session = require('express-session');
-const expressOasGenerator = require('express-oas-generator');
+// const session = require('express-session');
+// const expressOasGenerator = require('express-oas-generator');
 const path = require('path');
+// const RedisStore = require('connect-redis')(session);
+const passport = require('passport');
+
 
 const database = require('./config/key').MongoURI;
-var indexRoute = require('./routes/index');
+const indexRoute = require('./routes/index');
 
 // Set up the app with express
 const app = express();
@@ -34,21 +38,32 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // connect flash
 app.use(flash());
-app.use(session({ secret: 'dragonbeast4theTrophy', saveUninitialized: false, resave: false }));
+// app.use(session({
+//   store: new RedisStore({
+//     url: config.redisStore.url
+//   }),
+//   secret: config.redisStore.secret,
+//   resave: false,
+//   saveUninitialized: false
+// }));
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 // generate api docs (Swagger)
 // expressOasGenerator.init(app, function(spec) {
-// 	_.set(spec, 'info.title', 'New Title');
-// 	_.set(spec, "paths['/path'].get.parameters[0].example", 2);
-// 	return spec;
+// _.set(spec, 'info.title', 'New Title');
+// _.set(spec, "paths['/path'].get.parameters[0].example", 2);
+// return spec;
 // });
 
 // connect to database
-mongoose.connect(database, { useNewUrlParser: true }, function(err, client) {
-	if (err) console.log(err);
-	console.log('Mongodb Connection passed');
+// eslint-disable-next-line no-unused-vars
+mongoose.connect(database, { useNewUrlParser: true }, (err, client) => {
+  if (err) console.log(err);
+  console.log('Mongodb Connection passed');
 });
-var db = mongoose.connection;
+const db = mongoose.connection;
 db.once('open', () => console.log('Connected to Mongodb'));
 // check if error
 db.on('error', console.error.bind(console, 'Mongodb connection error:'));
@@ -58,18 +73,18 @@ app.use('/', indexRoute);
 
 // Express will serve up 404 file if a route is not recognized
 app.get('*', (req, res) => {
-	res.render(path.resolve(__dirname, 'views', '404'));
+  res.render(path.resolve(__dirname, 'views', '404'));
 });
 
 // error handler
-app.use(function(err, req, res, next) {
-	// set locals, only providing error in development
-	res.locals.message = err.message;
-	res.locals.error = req.app.get('env') === 'development' ? err : {};
+app.use((err, req, res) => {
+  // set locals, only providing error in development
+  res.locals.message = err.message;
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-	// render the error page
-	res.status(err.status || 500);
-	res.render('error');
+  // render the error page
+  res.status(err.status || 500);
+  res.render('error');
 });
 
 module.exports = app;

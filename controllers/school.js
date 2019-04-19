@@ -1,10 +1,9 @@
-const schoolDb = require("./schoolPromise");
+const schoolDb = require('./promise').SchoolDb;
 
 const Schools = {
     async create(req, res, next){
         const queryText = {
-            name: req.body.name,
-            address: req.body.address
+            name: req.body.name
         };
         try {
             const createdSchool = await schoolDb.create(queryText);
@@ -38,8 +37,8 @@ const Schools = {
             _id: req.params.school_id
         }
         const updateText = {
-            name: req.body.name,
-            type: req.body.type
+            name: req.body.name
+           
         };
         try {
             const updatedSchool = await schoolDb.findOneAndUpdate(queryText, updateText);
@@ -59,4 +58,6 @@ const Schools = {
             return res.status(400).send(error);
         }
     }
-}
+  
+};
+module.exports = School;

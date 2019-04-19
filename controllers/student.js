@@ -1,18 +1,16 @@
 const studentDb = require('./studentPromise');
-const classModel = require("../models/classes");
-const schoolModel = require("../models/schools");
+const classModel = require("../models/class");
+const schoolModel = require("../models/school");
 
 const Student = {
     async create(req, res, next){
         const queryText = {
-            school_id: req.body.school_id,
             first_name: req.body.first_name,
             last_name: req.body.last_name,
             guardian_name: req.body.guardian_name,
             guardian_number: req.body.guardian_number,
             guardian_email: req.body.guardian_email,
             amount_paid: req.body.amount_paid,
-            class_id: req.body.class_id,
             reg_number:  req.body.reg_number
         };
         try {
@@ -68,14 +66,12 @@ const Student = {
             _id: req.params.student_id  
         };
         const updateText = {
-            school_id: req.body.school_id,
             first_name: req.body.first_name,
             last_name: req.body.last_name,
             guardian_name: req.body.guardian_name,
             guardian_number: req.body.guardian_number,
             guardian_email: req.body.guardian_email,
             amount_paid: req.body.amount_paid,
-            class_id: req.body.class_id,
             reg_number:  req.body.reg_number
         };
         try {
@@ -95,8 +91,8 @@ const Student = {
         }catch(error){
             return res.status(400).send(error);
         }
-    }
-    
+    },
+
 }
 
-module.exports = students;
+module.exports = Student;
