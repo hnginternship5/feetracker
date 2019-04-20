@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{{title}}</title>
+    <style>
+        
+        #about {
+            padding: 15px 5px;
+            background: #fff;
+        }
+
+        #about > h1 {
+            background: #663333;
+            color: #fff;
+            text-align: center;
+            margin: 15px 0 30px;
+            padding: 5px 0;
+
+        }
+        #about > h4 {
+            text-align: center;
+            background-color:white;
+           
+        }
+         #about > h6 {
+            text-align: center;
+            background-color:white;
+           
+        }
+        #last > h2 {
+            text-align: center;
+        }
+        #about >  hr{
+            border:1px solid;
+            width: 100%;
+            margin-left:10px;
+        }
+        #last > h3{
+            text-align: center;
+            background-color: #11144c;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    {{> header }}
+
+    <div id="about" class="container">
+
+        <h1>About us</h1>
+        
+        {{!-- WRITE ALL YOUR ABOUT-US CODE WITHIN --}}
+
+        <b>FeesTracker</b> is an online <b>School Management system</b>  that is easy to use. It keep tracks of Pupil fees and improve work efficiecy and productivity. <br>Whether you are a school administrator or a private tutor, you can use. <b>FeeTracker</b> to manage tuition fees of your students.
+        <br> We send you reminders when fees are due, we help you time and send fee alert to the student’s parents or guadian. We send you notifications when fee payments are made by a particular student with the payment details Whenever a Student fails to pay his/her fees before or after the grace period. 
+        <br>
+        <br>
+                {{!-- <b>FeeTracker</b> was created by a group of programmers to meet the needs of jobs availability in the continent and to
+        connect to developers across the continent.<p> And this group of programmers include:</p>
+        <ul>
+            <li type="1">Jesutomiwa Salam (Senior Back-End Developer)</li> 
+            <li type="1">Abdullahi Ayobami Oladosu (Senior Front-End Developer)</li> 
+            <li type="1">Chiaju Chinedu (Front-End Developer)</li>
+            <li type="1">Damilola Shofoluwe (Senior UI/UX Designer)</li>
+        </ul> 
+        <div id="one"class="subteams"><b>Jesutomiwa Salam</b><br> (Senior Back-End Developer)<p>He is a Fullstack developer
+            <br> on the Front end platform.</p></div>
+        <div id="two"class="subteams"><b>Abdullahi Oladosu</b> <br>(Senior Front-End Developer)<p>He is a Fullstack developer
+            <br> on the Front end platform.</p></div>
+        <div id="three" class="subteams"><b>Chiaju Chinedu.</b> <br> (Front-End Developer) <p>He is a Fullstack developer <br> on the Front end platform.</p></div>
+        <div id="ui" class="subteams"><b>Damilola Shofoluwe</b> <br>(Senior UI/UX Designer)<p>He is a Fullstack developer
+            <br> on the UI/UX platform.</p></div>
+        <br>
+        <br> --}}
+        <h4>Easy to Use</h4>
+        <hr>
+        <b>FeesTracker</b> FeeTrack is really easy to use. Managing school fees of students have never been easier
+          <br>
+          <br>
+            <h4>Wide Array of Usage</h4>
+            <hr>
+            <br>
+
+            <h6><p>Whether you are a school administrator or a private tutor; you can use FeeTrack to manage tutition fees of your students</p></h6>
+            <hr>
+            <br>
+            <h4>We Save You The Stress</h4>
+            <br>
+           
+            <h6><p>You dont have to worry about fees paid and the ones that have not been paid. This is because we track all your fees for you. </p></h6>
+            
+            <hr>
+        {{!-- AN AREA FOR CONTRIBUTORS --}}
+        <h1>OUR CONTRIBUTORS</h1>
+
+{{!--  Row of Contributors --}}
+        <div class="row">
+            <div class="col-md-6">
+
+        <ul>
+            <li> Ivory Okeke</li> 
+            <li> Marow Macaulay</li> 
+           
+        </ul> 
+            </div>
+
+            <div class="col-md-6">
+
+        <ul>
+            <li> Abdullahi Oladosu</li> 
+            <li> Sholademi Elijah</li> 
+           
+        </ul>                 
+            </div>
+        </div>
+
+    </div>
+    
+    {{!-- <div id="last" class="container">
+        <h3>FeesTracker</h3>
+  </div>--}}
+</div>
+<script src="views/dist/js/bootstrap.min.js"></script>
+
+    </div>
+
+    {{> footer}}
+</body>
