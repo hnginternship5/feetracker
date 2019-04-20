@@ -144,6 +144,73 @@ class FeeDb {
   }
 }
 
+// Term promise
+class TermDb {
+  static find(param) {
+    return new Promise((resolve, reject) => {
+      Term.find(param)
+        .then((res) => {
+          resolve(res);
+        })
+        .catch((err) => {
+          reject(err);
+        });
+    });
+  }
+
+  static create(param) {
+    return new Promise((resolve, reject) => {
+      Term.create(param)
+        .then((res) => {
+          resolve(res);
+        })
+        .catch((err) => {
+          reject(err);
+        });
+    });
+  }
+
+  static findOne(param) {
+    return new Promise((resolve, reject) => {
+      Term.findOne(param)
+        .then((res) => {
+          resolve(res);
+        })
+        .catch((err) => {
+          reject(err);
+        });
+    });
+  }
+
+  /**
+     * @param {string} param
+     * @param {string} text
+     * @return {object} returns updated object
+     */
+  static findOneAndUpdate(param, text) {
+    return new Promise((resolve, reject) => {
+      Term.findOneAndUpdate(param, text, { new: true })
+        .then((res) => {
+          resolve(res);
+        })
+        .catch((err) => {
+          reject(err);
+        });
+    });
+  }
+
+  static findOneAndDelete(param) {
+    return new Promise((resolve, reject) => {
+      Term.findOneAndDelete(param)
+        .then((res) => {
+          resolve(res);
+        })
+        .catch((err) => {
+          reject(err);
+        });
+    });
+  }
+}
 // School promise
 class SchoolDb {
   static find(param) {

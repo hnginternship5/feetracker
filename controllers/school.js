@@ -72,5 +72,4 @@ const School = {
     }
   },
 };
-
 module.exports = School;
