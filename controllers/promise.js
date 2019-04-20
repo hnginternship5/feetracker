@@ -2,6 +2,7 @@ const Class = require('../models/class');
 const Fee = require('../models/fee');
 const School = require('../models/school');
 const Student = require('../models/student');
+const User = require('../models/user');
 /**
  * @param {string} text
  * @returns {object} return all
@@ -52,7 +53,7 @@ class ClassDb {
      */
   static findOneAndUpdate(param, text) {
     return new Promise((resolve, reject) => {
-      Class.findOneAndUpdate(param, text)
+      Class.findOneAndUpdate(param, text, { new: true })
         .then((res) => {
           resolve(res);
         })
@@ -120,7 +121,7 @@ class FeeDb {
      */
   static findOneAndUpdate(param, text) {
     return new Promise((resolve, reject) => {
-      Fee.findOneAndUpdate(param, text)
+      Fee.findOneAndUpdate(param, text, { new: true })
         .then((res) => {
           resolve(res);
         })
@@ -143,6 +144,73 @@ class FeeDb {
   }
 }
 
+// Term promise
+class TermDb {
+  static find(param) {
+    return new Promise((resolve, reject) => {
+      Term.find(param)
+        .then((res) => {
+          resolve(res);
+        })
+        .catch((err) => {
+          reject(err);
+        });
+    });
+  }
+
+  static create(param) {
+    return new Promise((resolve, reject) => {
+      Term.create(param)
+        .then((res) => {
+          resolve(res);
+        })
+        .catch((err) => {
+          reject(err);
+        });
+    });
+  }
+
+  static findOne(param) {
+    return new Promise((resolve, reject) => {
+      Term.findOne(param)
+        .then((res) => {
+          resolve(res);
+        })
+        .catch((err) => {
+          reject(err);
+        });
+    });
+  }
+
+  /**
+     * @param {string} param
+     * @param {string} text
+     * @return {object} returns updated object
+     */
+  static findOneAndUpdate(param, text) {
+    return new Promise((resolve, reject) => {
+      Term.findOneAndUpdate(param, text, { new: true })
+        .then((res) => {
+          resolve(res);
+        })
+        .catch((err) => {
+          reject(err);
+        });
+    });
+  }
+
+  static findOneAndDelete(param) {
+    return new Promise((resolve, reject) => {
+      Term.findOneAndDelete(param)
+        .then((res) => {
+          resolve(res);
+        })
+        .catch((err) => {
+          reject(err);
+        });
+    });
+  }
+}
 // School promise
 class SchoolDb {
   static find(param) {
@@ -188,7 +256,7 @@ class SchoolDb {
      */
   static findOneAndUpdate(param, text) {
     return new Promise((resolve, reject) => {
-      School.findOneAndUpdate(param, text)
+      School.findOneAndUpdate(param, text, { new: true })
         .then((res) => {
           resolve(res);
         })
@@ -256,7 +324,7 @@ class StudentDb {
      */
   static findOneAndUpdate(param, text) {
     return new Promise((resolve, reject) => {
-      Student.findOneAndUpdate(param, text)
+      Student.findOneAndUpdate(param, text, { new: true })
         .then((res) => {
           resolve(res);
         })
@@ -279,71 +347,72 @@ class StudentDb {
   }
 }
 
-// Term promise
-class TermDb {
-  static find(param) {
-    return new Promise((resolve, reject) => {
-      Term.find(param)
-        .then((res) => {
-          resolve(res);
-        })
-        .catch((err) => {
-          reject(err);
-        });
-    });
+// user promise
+//user promise
+class UserDb {
+  static find(param){
+      return new Promise((resolve, reject) => {
+          User.find(param).populate('school')
+          .then((res) => {
+              resolve(res);
+          })
+          .catch((err) => {
+              reject(err);
+          })
+      });
   }
 
-  static create(param) {
-    return new Promise((resolve, reject) => {
-      Term.create(param)
-        .then((res) => {
-          resolve(res);
-        })
-        .catch((err) => {
-          reject(err);
-        });
-    });
+  static create(param){
+      return new Promise((resolve, reject) => {
+          User.create(param)
+          .then((res) => {
+              resolve(res);
+          })
+          .catch((err) => {
+              reject(err);
+          });
+      });
   }
 
-  static findOne(param) {
-    return new Promise((resolve, reject) => {
-      Term.findOne(param)
-        .then((res) => {
-          resolve(res);
-        })
-        .catch((err) => {
-          reject(err);
-        });
-    });
+  static findOne(param){
+      return new Promise((resolve, reject) => {
+          User.findOne(param).populate('school')
+          .then((res) => {
+              resolve(res);
+          })
+          .catch((err) => {
+              reject(err);
+          });
+      });
   }
 
   /**
-     * @param {string} param
-     * @param {string} text
-     * @return {object} returns updated object
-     */
-  static findOneAndUpdate(param, text) {
-    return new Promise((resolve, reject) => {
-      Term.findOneAndUpdate(param, text)
-        .then((res) => {
-          resolve(res);
-        })
-        .catch((err) => {
-          reject(err);
-        });
-    });
+   * @param {string} param
+   * @param {string} text
+   * @return {object} returns updated object
+   */
+  static findOneAndUpdate(param, text){
+      return new Promise((resolve, reject) => {
+          User.findOneAndUpdate(param, text, { new: true }).populate('school')
+          .then((res) => {
+              resolve(res);
+          })
+          .catch((err) => {
+              reject(err);
+          });
+      });
   }
 
-  static findOneAndDelete(param) {
-    return new Promise((resolve, reject) => {
-      Term.findOneAndDelete(param)
-        .then((res) => {
-          resolve(res);
-        })
-        .catch((err) => {
-          reject(err);
-        });
-    });
+  static findOneAndDelete(param){
+      return new Promise((resolve, reject) => {
+          User.findOneAndDelete(param).populate('school')
+          .then((res) => {
+              resolve(res);
+          })
+          .catch((err) => {
+              reject(err);
+          });
+      });
   }
 }
 module.exports = {
@@ -351,5 +420,5 @@ module.exports = {
   FeeDb,
   SchoolDb,
   StudentDb,
-  TermDb,
+  UserDb
 };

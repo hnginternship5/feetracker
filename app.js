@@ -4,13 +4,14 @@ const mongoose = require('mongoose');
 const exphbs = require('express-handlebars');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-// const _ = require('lodash');
 const flash = require('connect-flash');
-// const session = require('express-session');
+const session = require('express-session');
 // const expressOasGenerator = require('express-oas-generator');
 const path = require('path');
+const passport = require("passport");
 // const RedisStore = require('connect-redis')(session);
-const passport = require('passport');
+var expressValidator = require('express-validator');
+
 
 
 const database = require('./config/key').MongoURI;
@@ -38,17 +39,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // connect flash
 app.use(flash());
-// app.use(session({
-//   store: new RedisStore({
-//     url: config.redisStore.url
-//   }),
-//   secret: config.redisStore.secret,
-//   resave: false,
-//   saveUninitialized: false
-// }));
-
-app.use(passport.initialize());
-app.use(passport.session());
+app.use(session({ secret: 'dragonbeast4theTrophy', saveUninitialized: true, resave: true }));
 
 // generate api docs (Swagger)
 // expressOasGenerator.init(app, function(spec) {
@@ -56,6 +47,10 @@ app.use(passport.session());
 // _.set(spec, "paths['/path'].get.parameters[0].example", 2);
 // return spec;
 // });
+
+app.use(passport.initialize());
+app.use(passport.session());
+require('./config/passport')(passport);
 
 // connect to database
 // eslint-disable-next-line no-unused-vars
@@ -70,6 +65,7 @@ db.on('error', console.error.bind(console, 'Mongodb connection error:'));
 
 // API ROUTES
 app.use('/', indexRoute);
+app.use(expressValidator());
 
 // Express will serve up 404 file if a route is not recognized
 app.get('*', (req, res) => {
