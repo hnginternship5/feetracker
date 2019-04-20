@@ -53,7 +53,7 @@ class ClassDb {
      */
   static findOneAndUpdate(param, text) {
     return new Promise((resolve, reject) => {
-      Class.findOneAndUpdate(param, text)
+      Class.findOneAndUpdate(param, text, { new: true })
         .then((res) => {
           resolve(res);
         })
@@ -121,7 +121,7 @@ class FeeDb {
      */
   static findOneAndUpdate(param, text) {
     return new Promise((resolve, reject) => {
-      Fee.findOneAndUpdate(param, text)
+      Fee.findOneAndUpdate(param, text, { new: true })
         .then((res) => {
           resolve(res);
         })
@@ -189,7 +189,7 @@ class SchoolDb {
      */
   static findOneAndUpdate(param, text) {
     return new Promise((resolve, reject) => {
-      School.findOneAndUpdate(param, text)
+      School.findOneAndUpdate(param, text, { new: true })
         .then((res) => {
           resolve(res);
         })
@@ -257,7 +257,7 @@ class StudentDb {
      */
   static findOneAndUpdate(param, text) {
     return new Promise((resolve, reject) => {
-      Student.findOneAndUpdate(param, text)
+      Student.findOneAndUpdate(param, text, { new: true })
         .then((res) => {
           resolve(res);
         })
@@ -326,7 +326,7 @@ class UserDb {
    */
   static findOneAndUpdate(param, text){
       return new Promise((resolve, reject) => {
-          User.findOneAndUpdate(param, text).populate('school')
+          User.findOneAndUpdate(param, text, { new: true }).populate('school')
           .then((res) => {
               resolve(res);
           })

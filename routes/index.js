@@ -44,18 +44,16 @@ router.get('/about', function(req,res,next){
 // API routes
 
 // Authentication routes
-router.post('/api/register', AuthController.register); // School administrator registration
+router.post('/register', AuthController.register); // School administrator registration
 
-router.post('/api/login', AuthController.login); // School administrator login
+router.post('/login', AuthController.login); // School administrator login
 
-router.get('/api/logout', AuthController.logout);
+router.get('/logout', AuthController.logout);
 
 // Passport authentication test confirmation
-router.get('/api/profile', isAuthenticated, (req, res) => {
+router.get('/profile', isAuthenticated, (req, res) => {
 	res.status(200).send(req.user);
 });
-
-module.exports = router;
 
 //Authentication middleware
 function isAuthenticated(req, res, next) {
@@ -77,23 +75,31 @@ router.get("/", function(req, res, next) {
 });
 
 // Student Routes
-router.post('/student', studentValidations.sanitizeAndValidateStudents,  StudentController.create);
-router.get('/student', StudentController.get_one_student);
-router.get('/student', StudentController.get_all_students);
+router.post('/student', isAuthenticated, StudentController.create);
+router.get('/student/:id', isAuthenticated, StudentController.get_one_student);
+router.get('/students', isAuthenticated, StudentController.get_all_students);
+router.patch('/student/:id', isAuthenticated, StudentController.update_student);
+router.delete('/student/:id', isAuthenticated, StudentController.delete_student);
 
 // Class Routes
-router.post('/class', ClassController.create);
-router.get('/class', ClassController.get_one_class);
-router.get('/classes', ClassController.get_all_classes);
+router.post('/class', isAuthenticated, ClassController.create);
+router.get('/class/:id', isAuthenticated, ClassController.get_one_class);
+router.get('/classes', isAuthenticated, ClassController.get_all_classes);
+router.patch('/class/:id', isAuthenticated, ClassController.update_class);
+router.delete('/class/:id', isAuthenticated, ClassController.delete_class);
 
 // Fee Routes
-router.post('/fee', FeeController.create);
-router.get('/fee', FeeController.get_one_fee);
-router.get('/fees', FeeController.get_all_fees);
+router.post('/fee', isAuthenticated, FeeController.create);
+router.get('/fee/:id', isAuthenticated, FeeController.get_one_fee);
+router.get('/fees', isAuthenticated, FeeController.get_all_fees);
+router.patch('/fee/:id', isAuthenticated, FeeController.update_fee);
+router.delete('/fee/:id', isAuthenticated, FeeController.delete_fee);
 
 // Term Routes
-router.post('/term', TermController.create);
-router.get('/term', TermController.get_one_term);
-router.get('/terms', TermController.get_all_terms);
+router.post('/term', isAuthenticated, TermController.create);
+router.get('/term/:id', isAuthenticated, TermController.get_one_term);
+router.get('/terms', isAuthenticated, TermController.get_all_terms);
+router.patch('/term/:id', isAuthenticated, TermController.update_term);
+router.delete('/term/:id', isAuthenticated, TermController.delete_term);
 
 module.exports = router;
