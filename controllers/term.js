@@ -1,77 +1,54 @@
-const _ = require('lodash');
 const termDb = require('./promise').TermDb;
 
 const Term = {
   async create(req, res) {
+    const queryText = req.body;
     try {
-      const queryText = _.omit(req.body, ['school_id']);
-      queryText.school_id = req.user.school.id;
       const createdTerm = await termDb.create(queryText);
-      return res.status(201).send({
-        message: 'Term created successfully',
-        data: createdTerm,
-      });
+      return res.status(201).json(createdTerm);
     } catch (error) {
       return res.status(400).send(error);
     }
   },
   async get_all_terms(req, res) {
-    const queryText = { school_id: req.user.school.id };
+    const queryText = {};
     try {
       const foundTerms = await termDb.find(queryText);
-      return res.status(200).send({
-        message: 'Terms retrieved successfully',
-        data: foundTerms,
-      });
+      return res.status(200).json(foundTerms);
     } catch (error) {
       return res.status(400).send(error);
     }
   },
   async get_one_term(req, res) {
     const queryText = {
-      _id: req.params.id,
-      school_id: req.user.school.id,
+      id: req.params.termId,
     };
     try {
       const foundTerm = await termDb.findOne(queryText);
-      if (!foundTerm) return res.status(404).send({ message: 'Term not found' });
-      return res.status(200).send({
-        message: 'Term retrieved successfully',
-        data: foundTerm,
-      });
+      return res.status(200).json(foundTerm);
     } catch (error) {
       return res.status(400).send(error);
     }
   },
   async update_term(req, res) {
     const queryText = {
-      _id: req.params.id,
-      school_id: req.user.school.id,
+      id: req.params.termId,
     };
-    const updateData = _.omit(req.body,['school_id']);
+    const updateData = req.body;
     try {
       const updatedTerm = await termDb.findOneAndUpdate(queryText, updateData);
-      if (!updatedTerm) return res.status(404).send({ message: 'Term not found' });
-      return res.status(200).send({
-        message: 'Term updated successfully',
-        data: updatedTerm,
-      });
+      return res.status(200).json(updatedTerm);
     } catch (error) {
       return res.status(400).send(error);
     }
   },
   async delete_term(req, res) {
     const queryText = {
-      _id: req.params.id,
-      school_id: req.user.school.id
+      id: req.params.termId,
     };
     try {
       const deletedTerm = await termDb.findOneAndDelete(queryText);
-      if (!deletedTerm) return res.status(404).send({ message: 'Term not found' });
-      return res.status(200).send({
-        message: 'Term successfully deleted',
-        data: deletedTerm,
-      });
+      return res.status(200).json(deletedTerm);
     } catch (error) {
       return res.status(400).send(error);
     }

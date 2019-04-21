@@ -29,4 +29,4 @@ const termSchema = new Schema({
     ref: 'Fee',
   },
 });
-module.exports = mongoose.model('Term', termSchema);
+module.exports = mongoose.model('Student', termSchema);

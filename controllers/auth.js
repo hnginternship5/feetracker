@@ -19,7 +19,7 @@ const Auth = {
             };
             const { isValid, errors } = validateSchool(newSchool);
             if (!isValid)
-                res.status(400).send({ errors });
+                res.status(400).send({ errors: errors });
             else {
                 var school = await schoolDb.create(newSchool);
                 schoolId = school._id;
@@ -56,8 +56,7 @@ const Auth = {
                         const user = await userDb.create(newUser); //Create user and return user
                         user.school.name = school_name;
                         user.school.address = school_address;
-                        user.school.currency = school_currency;
-                        user.school.id = schoolId;
+                        user.school.currency = school_currency
                         res.status(201).send(user.toJSON());
                     }
                 }
@@ -79,7 +78,7 @@ const Auth = {
             }
             req.logIn(user, function(err) {
               if (err) { return next(err); }
-              return res.status(200).send({ user });
+              return res.status(200).send({ user: user });
             });
           })(req, res, next);
     },

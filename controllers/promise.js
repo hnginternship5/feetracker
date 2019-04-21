@@ -53,7 +53,7 @@ class ClassDb {
      */
   static findOneAndUpdate(param, text) {
     return new Promise((resolve, reject) => {
-      Class.findOneAndUpdate(param, text, { new: true })
+      Class.findOneAndUpdate(param, text)
         .then((res) => {
           resolve(res);
         })
@@ -121,7 +121,7 @@ class FeeDb {
      */
   static findOneAndUpdate(param, text) {
     return new Promise((resolve, reject) => {
-      Fee.findOneAndUpdate(param, text, { new: true })
+      Fee.findOneAndUpdate(param, text)
         .then((res) => {
           resolve(res);
         })
@@ -144,73 +144,6 @@ class FeeDb {
   }
 }
 
-// Term promise
-class TermDb {
-  static find(param) {
-    return new Promise((resolve, reject) => {
-      Term.find(param)
-        .then((res) => {
-          resolve(res);
-        })
-        .catch((err) => {
-          reject(err);
-        });
-    });
-  }
-
-  static create(param) {
-    return new Promise((resolve, reject) => {
-      Term.create(param)
-        .then((res) => {
-          resolve(res);
-        })
-        .catch((err) => {
-          reject(err);
-        });
-    });
-  }
-
-  static findOne(param) {
-    return new Promise((resolve, reject) => {
-      Term.findOne(param)
-        .then((res) => {
-          resolve(res);
-        })
-        .catch((err) => {
-          reject(err);
-        });
-    });
-  }
-
-  /**
-     * @param {string} param
-     * @param {string} text
-     * @return {object} returns updated object
-     */
-  static findOneAndUpdate(param, text) {
-    return new Promise((resolve, reject) => {
-      Term.findOneAndUpdate(param, text, { new: true })
-        .then((res) => {
-          resolve(res);
-        })
-        .catch((err) => {
-          reject(err);
-        });
-    });
-  }
-
-  static findOneAndDelete(param) {
-    return new Promise((resolve, reject) => {
-      Term.findOneAndDelete(param)
-        .then((res) => {
-          resolve(res);
-        })
-        .catch((err) => {
-          reject(err);
-        });
-    });
-  }
-}
 // School promise
 class SchoolDb {
   static find(param) {
@@ -256,7 +189,7 @@ class SchoolDb {
      */
   static findOneAndUpdate(param, text) {
     return new Promise((resolve, reject) => {
-      School.findOneAndUpdate(param, text, { new: true })
+      School.findOneAndUpdate(param, text)
         .then((res) => {
           resolve(res);
         })
@@ -324,7 +257,7 @@ class StudentDb {
      */
   static findOneAndUpdate(param, text) {
     return new Promise((resolve, reject) => {
-      Student.findOneAndUpdate(param, text, { new: true })
+      Student.findOneAndUpdate(param, text)
         .then((res) => {
           resolve(res);
         })
@@ -393,7 +326,7 @@ class UserDb {
    */
   static findOneAndUpdate(param, text){
       return new Promise((resolve, reject) => {
-          User.findOneAndUpdate(param, text, { new: true }).populate('school')
+          User.findOneAndUpdate(param, text).populate('school')
           .then((res) => {
               resolve(res);
           })
