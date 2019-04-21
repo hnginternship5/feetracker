@@ -1,0 +1,89 @@
+/* The sidebar menu */
+.sid {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 50%; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: rgb(255, 255, 255); /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+    text-align: center;
+  }
+  
+  /* The navigation menu links */
+  .sid a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ca4545;
+    display: block;
+  }
+
+  .sidcontent {
+    margin-top: 200px;
+    width: 75%;
+    margin-left: 70px;
+
+  }
+  .login-link {
+      text-align: left;
+      margin-left: 90px;
+  }
+
+  .signup-link {
+    text-align: right;
+    margin-right: 100px;
+}
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Style page content */
+  .main {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 50%; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 50%;
+    background-image: url("img/Group.png") ;
+    background-repeat: no-repeat;
+    background-position: center center;
+     /* Black */
+    text-align: center;
+    
+    
+    
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  /* button and text area styles */
+  .btn-btn {
+    box-shadow: none !important;
+    width: 300px;
+    height: 50px;
+    border-radius: 25px;
+    margin-top: 20px;
+    background-image: linear-gradient(to right, #FC954F , #FE2EA5);
+    border-width: 0px;
+    border: 1px solid rgb(255, 255, 255);
+    
+  }
+  .input-area {
+    -webkit-appearance: none;
+    width: 300px;
+    border-radius: 25px;
+    height: 50px;
+    text-align: center;
+    border-width: 0px;
+    border: 1px solid rgb(73, 73, 73);
+  }
