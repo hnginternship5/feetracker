@@ -37,9 +37,10 @@ userSchema.methods.toJSON = function() {
         last_name: this.last_name,
         email: this.email,
         school: {
+            id: this._id,
             name: this.school.name,
             address: this.school.address,
-            currency: this.school.currency
+            currency: this.school.currency,
         }
     };
 };
