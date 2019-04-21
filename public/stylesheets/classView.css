@@ -36,7 +36,7 @@
     justify-content: center;
 }
 #students tr:nth-child(even){
-    background-color: blanchedalmond;
+    background-color: #FFEBED;
 }
 #students th{
     color: #A92E65;
