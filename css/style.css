@@ -1,4 +1,8 @@
 /* The sidebar menu */
+body{
+    font-family: Nunito ; 
+
+}
 .sid {
     height: 100%; /* Full-height: remove this if you want "auto" height */
     width: 50%; /* Set the width of the sidebar */
@@ -12,6 +16,11 @@
     text-align: center;
   }
   
+  .forgotpagelogo {
+    height: 200px;
+    width: 250px;
+  }
+
   /* The navigation menu links */
   .sid a {
     padding: 6px 8px 6px 16px;
@@ -21,8 +30,22 @@
     display: block;
   }
 
-  .sidcontent {
+  .dec-text{
     margin-top: 200px;
+    text-align: left;
+    color: #f1f1f1;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .feetrackertext{
+      font-size: 100px;
+      color: rgba(255, 255, 255, 0.479);
+  }
+ 
+
+  .sidcontent {
+    margin-top: 0px;
     width: 75%;
     margin-left: 70px;
 
@@ -66,6 +89,13 @@
     .sidenav a {font-size: 18px;}
   }
 
+  /* font faces na im be dis */
+
+  @font-face {
+  font-family: Nunito;
+  src: url(Fonts/Nunito/Nunito-Regular.ttf);
+}
+
   /* button and text area styles */
   .btn-btn {
     box-shadow: none !important;
@@ -76,6 +106,7 @@
     background-image: linear-gradient(to right, #FC954F , #FE2EA5);
     border-width: 0px;
     border: 1px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
     
   }
   .input-area {
