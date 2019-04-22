@@ -1,5 +1,5 @@
 const LocalStrategy = require('passport-local');
-const userDb = require("../controllers/promise").UserDb;
+const schoolDb = require("../controllers/promise").SchoolDb;
 
 module.exports = function (passport) {
     passport.use(new LocalStrategy({
@@ -7,7 +7,7 @@ module.exports = function (passport) {
             passwordField: 'password'
         },
         function(username, password, done) {
-            userDb.findOne({ email: username })
+            schoolDb.findOne({ email: username })
                 .then(user => {
                     if (!user)
                         return done(null, false, { message: 'Incorrect username or password' });
@@ -29,7 +29,7 @@ module.exports = function (passport) {
     });
 
     passport.deserializeUser(function(id, done) {
-        userDb.findOne({ _id: id })
+        schoolDb.findOne({ _id: id })
                 .then(user => {
                     done(null, user.toJSON());
                 });

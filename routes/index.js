@@ -1,14 +1,20 @@
 const express = require('express');
+var expressValidator = require('express-validator');
 
 const router = express.Router();
+router.use(expressValidator());
+
 // import controllers
 const StudentController = require('../controllers/student');
 const ClassController = require('../controllers/class');
 const FeeController = require('../controllers/fee');
 const TermController = require('../controllers/term');
 const AuthController = require('../controllers/auth');
-const studentValidations = require('../validation/student.validation.js')
 const HomeController = require('../controllers/home');
+
+//import validations
+const studentValidations = require('../validation/student.validation.js');
+const registrationValidations = require('../validation/school');
 
 
 // welcome page
@@ -49,7 +55,7 @@ router.get('/about', function(req,res,next){
 // API routes
 
 // Authentication routes
-router.post('/register', AuthController.register); // School administrator registration
+router.post('/register', registrationValidations, AuthController.register); // School administrator registration
 
 router.post('/login', AuthController.login); // School administrator login
 
