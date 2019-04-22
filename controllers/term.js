@@ -5,7 +5,7 @@ const Term = {
   async create(req, res) {
     try {
       const queryText = _.omit(req.body, ['school_id']);
-      queryText.school_id = req.user.school.id;
+      queryText.school_id = req.user.id;
       const createdTerm = await termDb.create(queryText);
       return res.status(201).send({
         message: 'Term created successfully',
@@ -16,7 +16,7 @@ const Term = {
     }
   },
   async get_all_terms(req, res) {
-    const queryText = { school_id: req.user.school.id };
+    const queryText = { school_id: req.user.id };
     try {
       const foundTerms = await termDb.find(queryText);
       return res.status(200).send({
@@ -30,7 +30,7 @@ const Term = {
   async get_one_term(req, res) {
     const queryText = {
       _id: req.params.id,
-      school_id: req.user.school.id,
+      school_id: req.user.id,
     };
     try {
       const foundTerm = await termDb.findOne(queryText);
@@ -46,7 +46,7 @@ const Term = {
   async update_term(req, res) {
     const queryText = {
       _id: req.params.id,
-      school_id: req.user.school.id,
+      school_id: req.user.id,
     };
     const updateData = _.omit(req.body,['school_id']);
     try {
@@ -63,7 +63,7 @@ const Term = {
   async delete_term(req, res) {
     const queryText = {
       _id: req.params.id,
-      school_id: req.user.school.id
+      school_id: req.user.id
     };
     try {
       const deletedTerm = await termDb.findOneAndDelete(queryText);

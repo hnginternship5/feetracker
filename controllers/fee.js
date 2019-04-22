@@ -4,7 +4,7 @@ const feeDb = require('./promise').FeeDb;
 const Fee = {
   async create(req, res) {
     const queryText = _.omit(req.body, ['school_id']);
-    queryText.school_id = req.user.school.id;
+    queryText.school_id = req.user.id;
     try {
       const createdFee = await feeDb.create(queryText);
       return res.status(201).send({
@@ -16,7 +16,7 @@ const Fee = {
     }
   },
   async get_all_fees(req, res) {
-    const queryText = { school_id: req.user.school.id };
+    const queryText = { school_id: req.user.id };
     try {
       const foundFees = await feeDb.find(queryText);
       return res.status(200).send({
@@ -30,7 +30,7 @@ const Fee = {
   async get_one_fee(req, res) {
     const queryText = {
       _id: req.params.id,
-      school_id: req.user.school.id
+      school_id: req.user.id
     };
     try {
       const foundFee = await feeDb.findOne(queryText);
@@ -46,7 +46,7 @@ const Fee = {
   async update_fee(req, res) {
     const queryText = {
       _id: req.params.id,
-      school_id: req.user.school.id
+      school_id: req.user.id
     };
     const updateData = _.omit(req.body, ['school_id']);
     try {
@@ -63,7 +63,7 @@ const Fee = {
   async delete_fee(req, res) {
     const queryText = {
       _id: req.params.id,
-      school_id: req.user.school.id
+      school_id: req.user.id
     };
     try {
       const deletedFee = await feeDb.findOneAndDelete(queryText);
