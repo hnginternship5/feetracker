@@ -4,7 +4,6 @@ const mongoose = require('mongoose');
 const exphbs = require('express-handlebars');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-// const _ = require('lodash');
 const flash = require('connect-flash');
 const session = require('express-session');
 // const expressOasGenerator = require('express-oas-generator');
