@@ -86,7 +86,7 @@ body {
 
 
 #main .right {
-	background: url(../img/group.png);
+	background: url(/images/group.png);
 	position: relative;
 	background-position: center;
 	background-repeat: no-repeat;
