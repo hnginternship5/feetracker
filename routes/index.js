@@ -41,6 +41,10 @@ router.get('/about', function(req,res,next){
 	res.render('about');
 });
 
+router.get('/pricing', (req, res) => {
+  res.render('pricing');
+});
+
 // API routes
 
 // Authentication routes
