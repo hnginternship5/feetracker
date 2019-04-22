@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../public/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/stylesheets/classView.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Admin DashBoard</title>
+</head>
+<body>
+    <div class="container-fluid">
+        
+        <div class="container">
+            <!-- <h2 class="header">Welcome Admin</h2> -->
+            <div class="row rowExtra" style="padding-top:200px">
+                <div class="col-xs-4 colMargin">
+                    <div class="box shadow" style="padding-top: 16px">
+                        <img src="../public/img/chartbar.svg" alt="" width="64px" height="64px">
+                        <h3 class="numSet">83%</h3>
+                        <p><small>Total fees paid</small></p>
+                    </div>
+                </div>
+                <div class="col-xs-4 colMargin">
+                    <div class="box shadow">
+                        <img src="../public/img/node.svg" alt="" width="101px" height="50px">
+                        <h3 class="numSet">290</h3>
+                        <p><small>Number of full payments</small></p>
+                    </div>                    
+                </div>
+                <div class="col-xs-4 colMargin">
+                    <div class="box shadow">
+                        <img src="../public/img/users.svg" alt="" width="57px" height="57px">
+                        <h3 class="numSet">350</h3>
+                        <p><small>Total number of students</small></p>
+                        <!-- <a href="#">Add Student +</a> -->
+                    </div>                  
+                </div>
+            </div>
+            <div class="row rowExtra" style="padding-top: 100px">
+                <div class="col-sm-10">
+                    <div class="form-group">
+                      <label for="searchBar"></label>
+                      <input type="text" class="form-control" name="searchBar" id="searchBar" aria-describedby="helpId" placeholder="Search by Student">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <input type="button" value="Search List" class="searchBtn">
+                </div>
+            </div>
+            <div class="row" style="padding:95px 0px 51px 42px">
+                <div class="col-xs-2" style="padding-right: 42px;">
+                    <p style="padding-top: 5px">Filter class:</p>
+                </div>
+                <div class="col-xs-10">
+                    <select class=" selectstyle" name="filter" id="filter">
+                        <option selected>Primary 1</option>
+                        <option value="1">Primary 2</option>
+                        <option value="2">Primary 3</option>
+                        <option value="3">Primary 4</option>
+                    </select>
+                </div>
+                   
+            </div>
+            <div class="row table-responsive-md">
+                <table class="table shadow-sm" id="students">
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Amount Paid</th>
+                        <th>Amount Owned</th>
+                        <th>Parent Name</th>
+                        <th>Parent Number</th>
+                        <th>Parent Email</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td>Arinze Doe</td>
+                        <td>150,000</td>
+                        <td>0</td>
+                        <td>Ada Doe</td>
+                        <td>0704533245</td>
+                        <td>parent@hotmail.com</td>
+                        <td><button class="tableBtn">view</button></td>
+                    </tr>
+                    <tr>
+                        <td>Arinze Doe</td>
+                        <td>150,000</td>
+                        <td>0</td>
+                        <td>Ada Doe</td>
+                        <td>0704533245</td>
+                        <td>parent@hotmail.com</td>
+                        <td><button class="tableBtn">view</button></td>
+                    </tr>
+                    <tr>
+                        <td>Arinze Doe</td>
+                        <td>150,000</td>
+                        <td>0</td>
+                        <td>Jane Doe</td>
+                        <td>0704533245</td>
+                        <td>parent@hotmail.com</td>
+                        <td><button class="tableBtn">view</button></td>
+                    </tr>
+                    <tr>
+                        <td>Arinze Doe</td>
+                        <td>150,000</td>
+                        <td>0</td>
+                        <td>John Doe</td>
+                        <td>0704533245</td>
+                        <td>parent@hotmail.com</td>
+                        <td><button class="tableBtn">view</button></td>
+                    </tr>
+                    <tr>
+                        <td>Arinze Doe</td>
+                        <td>150,000</td>
+                        <td>0</td>
+                        <td>Lorem ipsum</td>
+                        <td>0704533245</td>
+                        <td>parent@hotmail.com</td>
+                        <td><button class="tableBtn">view</button></td>
+                    </tr>
+                    <tr>
+                        <td>Arinze Doe</td>
+                        <td>150,000</td>
+                        <td>0</td>
+                        <td>Mark Doe</td>
+                        <td>0704533245</td>
+                        <td>parent@hotmail.com</td>
+                        <td><button class="tableBtn">view</button></td>
+                    </tr>
+                    <tr>
+                        <td>Arinze Doe</td>
+                        <td>150,000</td>
+                        <td>0</td>
+                        <td>Mercy Doe</td>
+                        <td>0704533245</td>
+                        <td>parent@hotmail.com</td>
+                        <td><button class="tableBtn">view</button></td>
+                    </tr>
+                    <tr>
+                        <td>Arinze Doe</td>
+                        <td>150,000</td>
+                        <td>0</td>
+                        <td>jackie Doe</td>
+                        <td>0704533245</td>
+                        <td>parent@hotmail.com</td>
+                        <td><button class="tableBtn">view</button></td>
+                    </tr>
+                    <tr>
+                        <td>Arinze Doe</td>
+                        <td>150,000</td>
+                        <td>0</td>
+                        <td>May Doe</td>
+                        <td>0704533245</td>
+                        <td>parent@hotmail.com</td>
+                        <td><button class="tableBtn">view</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
