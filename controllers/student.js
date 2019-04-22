@@ -6,7 +6,7 @@ const Student = {
     console.log(req);
     try {
       const queryText = _.omit(req.body, ['school_id']);
-      queryText.school_id = req.user.school.id;
+      queryText.school_id = req.user.id;
       console.log(queryText); 
       const createdStudent = await studentDb.create(queryText);
       return res.status(201).send({
@@ -18,7 +18,7 @@ const Student = {
     }
   },
   async get_all_students(req, res) {
-    const queryText = { school_id: req.user.school.id };
+    const queryText = { school_id: req.user.id };
     try {
       const foundStudents = await studentDb.find(queryText);
       return res.status(200).send({
@@ -30,7 +30,7 @@ const Student = {
     }
   },
   async get_all_students_json(req, res) {
-    const queryText = { school_id: req.user.school.id };
+    const queryText = { school_id: req.user.id };
     try {
       const foundStudents = await studentDb.find(queryText);
       return res.status(200).json({
@@ -44,7 +44,7 @@ const Student = {
   async get_one_student(req, res) {
     const queryText = {
       _id: req.params.id,
-      school_id: req.user.school.id,
+      school_id: req.user.id,
     };
     try {
       const foundStudent = await studentDb.findOne(queryText);
@@ -60,7 +60,7 @@ const Student = {
   async update_student(req, res) {
     const queryText = {
       _id: req.params.id,
-      school_id: req.user.school.id,
+      school_id: req.user.id,
     };
     const updateData = _.omit(req.body, ['school_id']);
     try {
@@ -77,7 +77,7 @@ const Student = {
   async delete_student(req, res) {
     const queryText = {
       _id: req.params.id,
-      school_id: req.user.school.id
+      school_id: req.user.id
     };
     try {
       const deletedStudent = await studentDb.findOneAndDelete(queryText);

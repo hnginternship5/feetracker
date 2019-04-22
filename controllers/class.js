@@ -5,7 +5,7 @@ const Class = {
   async create(req, res) {
     try {
       const queryText = _.omit(req.body, ['school_id']);
-      queryText.school_id = req.user.school.id;
+      queryText.school_id = req.user.id;
       const createdClass = await classDb.create(queryText);
       return res.status(201).send({
         message: 'Class successfully created',
@@ -17,7 +17,7 @@ const Class = {
   },
   async get_all_classes(req, res) {
     try {
-      const queryText = { school_id: req.user.school.id };
+      const queryText = { school_id: req.user.id };
       const foundClasses = await classDb.find(queryText);
       return res.status(200).send({
         message: 'Classes retrieved successfully',
@@ -31,7 +31,7 @@ const Class = {
     try {
       const queryText = {
         parent_id: null,
-        school_id: req.user.school.id,
+        school_id: req.user.id,
       };
       const foundClasses = await classDb.find(queryText);
       return res.status(200).json(foundClasses);
@@ -43,7 +43,7 @@ const Class = {
     try {
       const queryText = {
         _id: req.params.id,
-        school_id: req.user.school.id,
+        school_id: req.user.id,
       };
       const foundClass = await classDb.findOne(queryText);
       if (!foundClass) return res.status(404).send({ message: 'Class not found' });
@@ -60,7 +60,7 @@ const Class = {
       const queryText = {
         isArm: true,
         parent_id: req.params.id,
-        school_id: req.user.school.id,
+        school_id: req.user.id,
       };
       const foundArms = await classDb.findOne(queryText);
       return res.status(200).json(foundArms);
@@ -72,7 +72,7 @@ const Class = {
     try {
       const queryText = {
         _id: req.params.id,
-        school_id: req.user.school.id,
+        school_id: req.user.id,
       };
       const updateData = _.omit(req.body, ['school_id']);
       const updatedClass = await classDb.findOneAndUpdate(queryText, updateData);
@@ -89,7 +89,7 @@ const Class = {
     try {
       const queryText = {
         _id: req.params.id,
-        school_id: req.user.school.id,
+        school_id: req.user.id,
       };
       const deletedClass = await classDb.findOneAndDelete(queryText);
       if (!deletedClass) return res.status(404).send({ message: 'Class not found' });
