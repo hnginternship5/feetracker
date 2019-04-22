@@ -41,4 +41,4 @@ $ npm start
 &mdash; After making changes to the repo, push to master and create pull request, make sure there are no merge conflicts.
 
 &mdash; Do not merge pull request, a mentor will.
-&mdash; If upon fetching upstream, npm start fails, run npm install then try again.
+&mdash; If upon fetching upstream, npm start fails, run npm install then try again. Cheers!
