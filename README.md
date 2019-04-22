@@ -7,7 +7,8 @@
 
 **NB: If you will not be contributing the the project, ignore step 2 and any other comment on pull request.**
 
-Fork the repository first and clone it
+Fork the repository first and clone it 
+
 
 1. Fork the repository first and clone and run this:
 
