@@ -25,6 +25,11 @@ router.get('/register', (req, res) => {
 router.get('/forgotpassword', (req, res) => {
   res.render('forgot');
 });
+
+router.get('/pricing', (req, res) => {
+  res.render('pricing');
+});
+
 router.get('/dashboard', (req, res) => {
   res.render('dashboard/index');
 });

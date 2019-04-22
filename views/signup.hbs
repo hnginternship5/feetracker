@@ -1,65 +1,44 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<title>Sign Up</title>
-</head>
-<body class="body">
-	<section id="main">
-		<div class="cont">
+<section id="main" class="container-fluid">
 	<div class="row">
-		<div class="col-md-6">
-			<div class="left">
-			<div class="conner">
-				<div>
-					<img src="img/logo.png" class="logo">
-					<h1>FeeTracker</h1>
+		<div class="col-sm-12 col-md-5 left">
+			<a href="/" class="logo">
+				<img src="img/logo.png" class="logo">
+				<h1>FeeTracker</h1>
+			</a>
+			<div class="mt-4 mb-4">
+				<h2 class="mt-1 p-2">Create your account</h2>
+			</div>
+			<form method="POST" action="#">
+				<div class="form-group">
+					<input type="text" class="form-control" aria-describedby="username" placeholder="Enter school name" name="school_name">
 				</div>
-	<div class="containr">			
-	<form>
-			<div class="form-group">
-    			<label for="exampleInputEmail1">Name</label>
-			    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="  Enter School Name">
- 			</div>
- 			 <div class="form-group">
-  				  <label for="exampleInputEmail1">Email address</label>
-  				  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="  Enter email">
-  			</div>
-  			<div class="form-group">
-  				  <label for="exampleInputPassword1">Password</label>
-  				  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="  Password">
-  			</div>
-  			
-	</form>
-	<div class="form-group">
- 			 	<a href="#" class="bt">Sign Up</a>
- 			 </div>
-	</div>
-					<div class="conter">
-					<p>Already have an account? <a href="/login">Log In</a></p>
-
+				<div class="form-group">
+					<input type="email" class="form-control" aria-describedby="school_name" placeholder="Enter school email" name="email">
+				</div>
+				<div class="form-group">
+					<input type="password" class="form-control" aria-describedby="password" placeholder="Enter password" name="password">
+				</div>
+				<div class="form-group">
+					<input type="password" class="form-control" aria-describedby="confirm_password" placeholder="Confirm password" name="password2">
+				</div>
+				<div class="form-group">
+					<input type="submit" value="Submit" class="form-control submit" name="submit">
+				</div>
+			</form>
+			<div class="row links">
 				
-					</div>
-			</div>
+				<p class="col-sm-12">Already a member? <a class="link" href="/login" style="display:inline;">Log in</a></p>
+				<p class="col-sm-12"><a class="link" href="/forgotpassword" style="display:inline;">Forgot Password</a></p>
+				
 			</div>
 		</div>
-		<div class="col-md-6">
-			<div class="right">
-			<div class="conner">
-				<h1>FeeTracker</h1>	
+		<div class="d-none d-md-block col-md-7 right">
+			<div class="container-fluid">
+				<h1>FeeTracker</h1>
 				<h3>We are more than just a solution</h3>
-				<p>We are a trusted team of dedicated people. We are here to serve you in all your fee needs. We are just a click away.</p>
-			</div>
+				<p>We are a trusted team of dedicated people. We are here to serve you in all your fee
+					needs. We are just a click away.</p>
 			</div>
 		</div>
 	</div>
-	</div>
-	</section>
-
-
-
-
- <script src="js/bootstrap.min.js"></script>
-</body>
-</html>
+</section>
