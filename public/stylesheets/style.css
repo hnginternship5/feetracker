@@ -7,7 +7,6 @@ ul{
 }
 body{
   font-family: 'Work Sans';
-  overflow-x: hidden !important;
 }
 .br-0{
   border-radius: 0  !important
@@ -54,6 +53,18 @@ body{
   width: 40%
 }
 
+header{
+  display: flex;
+  align-content: center;
+	background: url('/images/banner.png');
+	width: 100%;
+  height: auto;
+  padding: 10px 0;
+	background-position: center;
+  background-size: cover;
+}
+
+
 /* Styling the navigation */
 .reg_desktop{
   background: #A92E65;
@@ -98,45 +109,21 @@ body{
 }
 
 .navbar-brand img{
-  height: 50px;
+  height: 60px;
 }
 
-#owl .item {
-  height: 364px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center, center;
+.scrolled-nav .navbar-brand img  {
+  height: 40px !important
 }
 
-#owl .item {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-#owl .item1 {
-  background: url('/images/banner.png');
-}
-
-#owl .item2 {
-  background: url('/images/banner2.jpg');
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  background: white;
-  z-index: 9999;
-  border-bottom: 2px solid #eee;
+.scrolled-nav {
+  padding-top: .5em;
+  height: 70px !important;
+  line-height: 60px !important;
+  box-shadow: 0px -1px 5px rgb(59, 59, 59)
 }
 
 /* Banner Section */
-
-.banner_left {
-
-}
-
 .banner_header{
   margin-top: .5em;
   font-size: 4em;
@@ -160,7 +147,9 @@ body{
   color: #fff
 }
 
-
+.img-fluid{
+  margin-top: 40px;
+}
 
 @media screen and (max-width:414px){
   .img-fluid{
@@ -176,25 +165,6 @@ body{
   }
   
 }
-
-@media screen and (max-width:992px){
-
-
-  .banner_left {
-    text-align: center !important;
-  }
-  
-}
-
-@media screen and (max-width:768px){
-
-
-  .banner_header {
-    font-size: 3em;
-  }
-  
-}
-
 
 /* How to use Section */
 .section_header{
