@@ -3,12 +3,283 @@
 <head>
 <title>{{title}}</title>
 </head>
-
+<style>
+    body{
+        font-family: Nunito;
+        line-height:3;
+    }
+    h3{
+        background: url('img/Group.png');
+        color: white;
+       text-align:center;
+        line-height:2.7;
+        margin-top:20px;
+        margin-bottom:20px;
+    }
+    #nic{
+        
+        text-align: center;
+        
+    }
+    #contents{
+        background-color: #8080801a;
+        border: 1px solid #8080801a;
+        border-radius: 30px;
+    }
+    hr{
+        border: 1px solid #8080801a;
+        border-radius: 30px;
+        background-color:#FC954F;
+        width:800px;
+    }
+    h4{
+        text-align:center;
+    }
+    footer{
+        display:block;
+    }
+    .btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+   }
+   a {
+    outline: none !important;
+   }
+   .client-btn:hover {
+    background: #FC954F;
+    color: #fff;
+   }
+    .btn:hover, .btn:focus, .btn.focus {
+        color: #fff;
+        text-decoration: none;
+    }
+    a:hover, a:focus {
+        color: #fff;
+        text-decoration: none;
+    }
+    a:active, a:hover {
+        outline: 0;
+    }
+    .client-btn {
+        padding: 7px 20px !important;
+        background: #FC954F;
+        border-radius: 4px;
+        line-height: 24px;
+        color: #fff;
+        font-weight: 500;
+        font-size: 17px;
+        transition: ease all 0.5s;
+    }
+    .col-md-6 {
+    width: 50%;
+   }
+   .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    float: left;
+    }
+    .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+        position: relative;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+        padding-top:7px;
+        vertical-align:middle;
+    }
+    .text-center {
+        text-align: center;
+    }
+    * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    #mars{
+        text-align:center;
+    }
+    .col-lg-4 {
+    box-sizing:border-box;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex: 0 0 33.333333%;
+    }
+    #me{
+    max-width: 1140px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    }
+    }
+    .border-top {
+    border-top: 1px solid #dee2e6 !important;
+    }
+    .row{
+        flex-wrap: wrap;
+        margin-right: -15px;
+        display:flex;
+        margin-left: -15px;
+    }
+     .py-5 {
+    padding-top: 3rem !important;
+    }
+    #real{
+        padding-top:20px;
+    }
+</style>
 
 
 <body>
+    <div class="container">
+	{{#each errors}}
+	<div class="alert alert-danger alert-dismissible fade show" role="alert">
+		<strong>{{msg}}</strong>
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+	{{/each}}
+	{{#if success}}
+	<div class="alert alert-success alert-dismissible fade show">
+		<strong>{{success}}</strong>
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+	{{/if}}
+</div>
+<div id="desktop_nav_wrapper" class="">
+	<div class="container">
+		<nav class="navbar navbar-expand p-0" id="">
+			<a class="navbar-brand" href="#">
+				<img src="/images/logo.png" alt="logo">
+			</a>
 
-<h2>About Us here</h2>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto desktop_nav">
+					<li class="nav-item active">
+						<a class="nav-link uni_link" href="/">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link uni_link" href="/about">About</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link uni_link" href="/login">Login</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link reg_desktop" href="/register">Register</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</div>
+
+        <h3><b>About FeeTracker</b></h3>
+            <div class="container" id="contents">
+                <b>Feetracker</b> is an online <b>franchise management</b> software that is supported to collect fees in multiple branch, and it is very easy to operate.
+                <b>Feetracker</b> is also one of the most automated and flexible fees calculation software that can accurately record fees paid and fees pending. Apart from being automated, it is also enough to accommodate the varying nature of fees payments that all education centre come across. Fees collection is also done on the basis of courses for the students. Our student fees managemnet software automatically calculate pending fees, previous paid details, deduction and concession if any applicable to the selected student. 
+
+                    Parents have forever been in a pain of going out of their way and visit the school just for the purpose of filling up their ward’s fee. On top of this there is an issue of carrying cash, making a DD or filling a form all of which are unnecessary burden for the parents. So <b>FeeTracker</b> provides a relief to the parents and now they can directly pay the fee online from the school app.
+
+           
+                
+
+            </div>
+            <h3><b>Why choose Feetracker?</b></h3>
+            <ul id="nic">
+             <li > With our fee management software, you can send automated fee reminders to all the parents. </li>
+             <hr>
+            <li> <b>Feetracker</b> also gives you a complete fee management software with an option for online fee payments </li>
+            <hr>
+             <li> <b>Feetracker</b> makes even the complex tasks like fee management very easy </li>
+             <hr>
+             <li> <b>Feetracker</b> allows Parents to automatically download the fee receipt. <p>It saves a lot of paper and time. And same receipts can be saved by the admin as well</p> </li>
+             <hr>
+             <li> With <b>Feetracker</b> fee management software, principals and school owners get daily reporting with graphs. <p>They can see today's fee collection, total fee received through out the year etc.</p></li>
+             <hr>
+             <li> <b>Feetracker</b> fee management software is trusted by 100's of schools in Africa.</li>
+                </ul>
+
+                <h3><b>Our Clients</b></h3>
+
+                <div  class="container" id="contents">
+                 “Get closer than ever to your customers. So close that you tell them what they need well before they realize it themselves”. – Steve Jobs, CEO, Apple Inc. <b>FeeTracker</b> has 
+                 always been dedicated to get closer to our customers irrespective of their location. Our customers are being served by our dedicated team of professionals
+                  through our regional offices in all the metro cities in Nigeria.
+                  <b>FeeTracker</b> has a long list of 1,500 satisfied customers 
+                  across all the 36 states of Nigeria and in more than 5 countries worldwide.
+                 The premier technology solutions of <b>Feetracker</b> include full featured digital language lab solution, Schooberry School/Campus management solution and 
+                 eShelf digital library system. With these products, we are positioned to provide customised solutions that satisfy the customer needs.
+                 <b>FeeTracker</b> operates in the educational sector with a strong base of International clients and Local clients across the world. 
+                  <b>FeeTracker</b>, every client is important and our services are tailored to suit the needs of our clients.
+                </div>
+                <h4 id="real">To view Our Clients click below</h4>
+                   <div id="mars" class="container"> 
+                    <a class="btn client-btn" href="international.hbs"><i class="fa fa-users"></i> International Clients</a>
+                    
+                    <a class="btn client-btn" href="local.hbs"><i class="fa fa-users"></i> Local Clients</a>
+                    </div>
+                    <footer class="">
+                            <script>
+                                $(window).scroll(function () {
+
+                                    if ($(window).scrollTop() > 500) {
+                                        $("#back-to-top").css("display", "block")
+                                    } else {
+                                        $("#back-to-top").css("display", "none")
+                                    }
+                                });
+                            </script>
+                            
+                            <div id="me" class="container border-top" >
+                                <div class="row py-5">
+                                    <div class="col-lg-4 footer">
+                                        <h5 class="b-7">FeeTracker</h5>
+                                        <p>FeeTracker is a renowned school fees tracker web app.</p>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <h5 class="b-7">Company</h5>
+                                        <ul>
+                                            <li><a href="">About Us</a></li>
+                                            <li><a href="">Features</a></li>
+                                            <li><a href="">Login</a></li>
+                                            <li><a href="">Sign Up</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <h5 class="b-7">Social</h5>
+                                        <ul class="social-links">
+                                            <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                                            <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                                            <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="last-footer text-center t-12">
+                                &copy; 2019. FeeTracker
+                            </div>
+                        </footer>
 
 </body>
 <html>
