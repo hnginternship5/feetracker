@@ -5,9 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../public/stylesheets/bootstrap.min.css">
-    <link rel="stylesheet" href="../public/stylesheets/classView.css">
+    {{!-- <link rel="stylesheet" href="../public/stylesheets/classView.css"> --}}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Admin DashBoard</title>
+    <style>
+        .box{
+    justify-content:center;
+    width: 329px;
+    height: 257px;
+    border-radius: 5px;
+    /* box-shadow: 0.5px 0.5px 17px 0.2px; */
+    text-align: center;
+    padding-top: 30px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    /* margin-left: auto; */
+    display:block; 
+} 
+
+.searchBtn{
+    height: 45px;
+    border: 0px;
+    border-radius: 25px;
+    margin-top: 20px;
+    background-color: #A92E65;
+    color: #FFFFFF;
+    width: 100%;
+}
+.header{
+    color: #A92E65;
+    margin-left: auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-left: 28px;
+}
+.makeInline{
+     display: inline;
+}
+
+.rowExtra{
+    justify-content: center;
+}
+#students tr:nth-child(even){
+    background-color: #FFEBED;
+}
+#students th{
+    color: #A92E65;
+    font-size: 16px;
+    font-family: Nunito;
+}
+.numSet{
+    color: #A92E65;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 45px;
+    padding-top: 24px;
+}
+.selectstyle{
+    color: #A92E65;
+    border: 1px solid #A92E65;
+    width: 219px;
+    height: 40px;
+    border-radius: 5px;
+}
+.tableBtn{
+ width: 78px;
+ height: 30px;
+ color: #FFFFFF;
+ background-color: #A92E65;
+ border: 0px;
+ border-radius: 5px;
+}
+@media screen and (min-width:768px){
+    .colMargin{
+         margin-left: 50px;
+    }
+}
+    </style>
 </head>
 <body>
     <div class="container-fluid">
@@ -17,21 +92,41 @@
             <div class="row rowExtra" style="padding-top:200px">
                 <div class="col-xs-4 colMargin">
                     <div class="box shadow" style="padding-top: 16px">
-                        <img src="../public/img/chartbar.svg" alt="" width="64px" height="64px">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0)">
+                        <path d="M44.8 7.4668H34.1333V55.4668H44.8V7.4668Z" fill="#FC954F"/>
+                        <path d="M28.8 40.5332H18.1333V55.4665H28.8V40.5332Z" fill="#FFDCE0"/>
+                        <path d="M12.8 30.9336H2.1333V55.467H12.8V30.9336Z" fill="#E57E25"/>
+                        <path d="M60.8 16H50.1333V55.4667H60.8V16Z" fill="#FE2EA5"/>
+                        <path d="M62.9333 56.5337H1.06667C0.477867 56.5337 0 56.0569 0 55.467C0 54.8772 0.477867 54.4004 1.06667 54.4004H62.9333C63.5221 54.4004 64 54.8772 64 55.467C64 56.0569 63.5221 56.5337 62.9333 56.5337Z" fill="#556080"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0">
+                        <rect width="64" height="64" fill="white"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
                         <h3 class="numSet">83%</h3>
                         <p><small>Total fees paid</small></p>
                     </div>
                 </div>
                 <div class="col-xs-4 colMargin">
                     <div class="box shadow">
-                        <img src="../public/img/node.svg" alt="" width="101px" height="50px">
+                        <svg width="101" height="50" viewBox="0 0 101 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="20" r="10" fill="#FE2EA5"/>
+                        <circle cx="50" cy="40" r="10" fill="#FE2EA5"/>
+                        <circle cx="91" cy="10" r="10" fill="#FE2EA5"/>
+                        <path d="M18 25.5L40.5 37.5M85 16.5L59 37.5" stroke="#FC954F"/>
+                        </svg>
                         <h3 class="numSet">290</h3>
                         <p><small>Number of full payments</small></p>
                     </div>                    
                 </div>
                 <div class="col-xs-4 colMargin">
                     <div class="box shadow">
-                        <img src="../public/img/users.svg" alt="" width="57px" height="57px">
+                        <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M34.397 12.7487C37.0326 14.4012 38.8806 17.1975 39.2171 20.4433C40.292 20.9455 41.4849 21.2343 42.7496 21.2343C47.367 21.2343 51.1094 17.492 51.1094 12.8753C51.1094 8.25801 47.367 4.51562 42.7496 4.51562C38.1764 4.51705 34.4668 8.19256 34.397 12.7487ZM28.9204 29.8651C33.5377 29.8651 37.2801 26.122 37.2801 21.5054C37.2801 16.8887 33.537 13.1464 28.9204 13.1464C24.3038 13.1464 20.5593 16.8895 20.5593 21.5061C20.5593 26.1227 24.3038 29.8651 28.9204 29.8651ZM32.4665 30.4349H25.3729C19.4709 30.4349 14.6693 35.2372 14.6693 41.1392V49.814L14.6914 49.9499L15.2889 50.137C20.9213 51.8968 25.8147 52.4837 29.8423 52.4837C37.7091 52.4837 42.2688 50.2408 42.5498 50.0978L43.1082 49.8154H43.1679V41.1392C43.17 35.2372 38.3685 30.4349 32.4665 30.4349ZM46.2971 21.8048H39.2584C39.1823 24.6211 37.9801 27.157 36.0787 28.9809C41.3248 30.5409 45.1632 35.4057 45.1632 41.152V43.8252C52.1131 43.5705 56.1179 41.6008 56.3818 41.4685L56.9402 41.1854H57V32.5077C57 26.6064 52.1984 21.8048 46.2971 21.8048ZM14.2518 21.2358C15.8872 21.2358 17.4087 20.7585 18.6977 19.9454C19.1074 17.2729 20.5401 14.9375 22.5866 13.347C22.5951 13.1905 22.6101 13.0354 22.6101 12.8775C22.6101 8.26014 18.867 4.51776 14.2518 4.51776C9.63373 4.51776 5.89206 8.26014 5.89206 12.8775C5.89206 17.4927 9.63373 21.2358 14.2518 21.2358ZM21.7593 28.9809C19.8671 27.1662 18.6692 24.6438 18.5817 21.8447C18.3207 21.8255 18.0624 21.8048 17.7964 21.8048H10.7036C4.80157 21.8048 0 26.6064 0 32.5077V41.184L0.0220517 41.3177L0.619581 41.5062C5.13804 42.9168 9.17065 43.567 12.6733 43.7719V41.152C12.6747 35.4057 16.5117 30.5423 21.7593 28.9809Z" fill="#FC825F"/>
+                        </svg>
                         <h3 class="numSet">350</h3>
                         <p><small>Total number of students</small></p>
                         <!-- <a href="#">Add Student +</a> -->

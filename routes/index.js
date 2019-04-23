@@ -47,6 +47,9 @@ router.get('/pricing', (req, res) => {
   res.render('pricing');
 });
 
+router.get('/dashboardClassView',(req, res)=> {
+  res.render('dashboardClassView');
+});
 // API routes
 
 // Authentication routes
