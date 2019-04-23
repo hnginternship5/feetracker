@@ -10,6 +10,7 @@ const AuthController = require('../controllers/auth');
 const studentValidations = require('../validation/student.validation.js')
 const schoolValidations = require('../validation/school.validation');
 const HomeController = require('../controllers/home');
+const SchoolController = require('../controllers/school');
 
 
 // welcome page
@@ -69,8 +70,7 @@ function isAuthenticated(req, res, next) {
 		 error: 'User not authenticated'
 	   });
 }
-router.post('/school', schoolValidations.sanitizeAndValidateSchools,
- SchooolController.create);
+router.post('/school', schoolValidations.sanitizeAndValidateSchools, SchoolController.create);
 
 // Updated Router here
 /* GET home page. */
